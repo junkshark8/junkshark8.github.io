@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kate Doolittle</title>
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- scripts for reusable navbar and footer components -->
+        <script src="components/navbar.js" type="text/javascript" defer></script>
+        <!--<script src="interactions/navbar-scroll.js" type="text/javascript" defer></script>-->
+        <script src="components/footer.js" type="text/javascript" defer></script>
+        <script src="interactions/gallery-buttons.js" type="text/javascript" defer></script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component id="navbar"></navbar-component>
+       
+        <div id="wrapper">
+            <div class="hero-text">
+                <h1 id="page-title">Kate Doolittle</h1>
+                <div id="subtitle">Artist & Graphic Designer</div>
+            </div>
+            <section id="hero-image">
+            </section>
+
+            <!-- main content -->
+            <section id="themes">
+                <h2 class="light">Recurring Themes</h2>
+                <div class="lightbox-container">
+                    <a class="image-link" tabindex="0" href="body-hair.html"><div class="lightbox">
+                        <img class="home image" src="images/thumbnails/bodyhair.jpg"></img>
+                        <h3 class="home title dark" style="background-color: #f067a1;">Body Hair</h3>
+                    </div></a>
+
+                    <a class="image-link" tabindex="0" href="social-justice.html"><div class="lightbox">
+                        <img class="home image" src="images/thumbnails/socialjustice.jpg"></img>
+                        <h3 class="home title dark" style="background-color: #f8991d;">Social Justice</h3>
+                    </div></a>
+
+                    <a class="image-link" tabindex="0" href="mental-health.html"><div class="lightbox">
+                        <img class="home image" src="images/thumbnails/mentalhealth.jpg"></img>
+                        <h3 class="home title dark" style="background-color: #fedf1d;">Mental Health</h3>
+                    </div></a>
+
+                    <a class="image-link" tabindex="0" href=""><div class="lightbox">
+                        <img class="home image" src="images/thumbnails/gender&sexuality.jpg"></img>
+                        <h3 class="home title dark" style="background-color: #3db65d;">Gender & Sexuality</h3>
+                    </div></a>
+
+                    <a class="image-link" tabindex="0" href=""><div class="lightbox">
+                        <img class="home image" src="images/thumbnails/sharks.jpg"></img>
+                        <h3 class="home title dark" style="background-color: #6eceeb;">Sharks</h3>
+                    </div></a>
+
+                    <a class="image-link" tabindex="0" href=""><div class="lightbox">
+                        <img class="home image" src="images/thumbnails/trash.jpg"></img>
+                        <h3 class="home title dark" style="background-color: #8e68ad;">Trash</h3>
+                    </div></a>
+                </div>
+            </section> 
+
+            <section id="gallery">
+                <h2 class="dark">Paintings, Drawings, Collages</h2>
+                <div id="gallery-horizontal-scroll" class="gallery-horizontal-scroll">
+                    <img src="images/gallery/am-i-dead.jpg" tabindex="0" alt="Surrealist collage. Text reads: Am I Dead?">
+                    <img src="images/gallery/baby-parts.JPG" tabindex="0" alt="Digital illustration of disembodied plastic baby limbs and head.">
+                    <img src="images/gallery/cherry-blossoms.jpg" tabindex="0" alt="Textured impressionistic painting of cherry blossoms.">
+                    <img src="images/gallery/bad-trip.jpg" tabindex="0" alt="Marker and colored pencil drawing of Kate pulling on her eyes with disembodied head and hands.">
+                    <img src="images/gallery/fish-eye.JPG" tabindex="0" alt="Digital illustration of Kate taking a selfie in the reflection of a ladle.">
+                    <img src="images/gallery/home.jpg" tabindex="0" alt="Collage of various images and colors.">
+                    <img src="images/gallery/still-waters-1.jpg" tabindex="0" alt="Abstract blue textured painting. 1  of 2.">
+                    <img src="images/gallery/still-waters-2.jpg" tabindex="0" alt="Abstract blue textured painting. 2  of 2.">
+                    <img src="images/gallery/backpack.JPG" tabindex="0" alt="Digital drawing of Kate's backpack.">
+                    <img src="images/gallery/kyle.JPG" tabindex="0" alt="Digital drawing of a Dollar General nametag. The name on the tag is Kyle.">
+                    <img src="images/gallery/basic-goods-coffee.JPG" tabindex="0" alt="Digital illustration of an iced coffee on a sunny table.">
+                    <img src="images/gallery/pants.JPG" tabindex="0" alt="Digital illustration of disembodied baggy jeans and chunky sneakers.">
+                    <img src="images/gallery/spiderman.jpg" tabindex="0" alt="Colored pencil drawing on tanned paper of Miles Morales.">
+                    <img src="images/gallery/passageway.jpg" tabindex="0" alt="Impressionistic painting of the Passageway in downtown Omaha, Nebraska.">
+                    <img src="images/gallery/howard-and-11th.jpg" tabindex="0" alt="Impressionistic painting of the street sign on the corner of Howard and 11th.">
+                    <img src="images/gallery/apple-heart.JPG" tabindex="0" alt="Digital illustration of a hand holding a human heart.">
+                    <img src="images/gallery/hang-in-there.JPG" tabindex="0" alt="Digital illustration of hands holding a cat upside down. Text reads: Hang in there!">
+                    <img src="images/gallery/give-em-lip.jpg" tabindex="0" alt="Collage of various newspaper clippings. Large text in center reads: WOMAN. Slightly smaller text at bottom reads: GIVE 'EM LIP">
+                    <img src="images/gallery/mohawk.JPG" tabindex="0" alt="Digital illustration of a person in profile with a mohawk, sticking their tongue out.">
+                    <img src="images/gallery/pirate-adjacent.jpg" tabindex="0" alt="Collage of a man with a pipe holding a bird and a sword.">
+                    <img src="images/gallery/it-was-fun.JPG" tabindex="0" alt="Digital drawing of Stu and Billy from Scream. Text reads: it was fun">
+                    <img src="images/gallery/stiles.jpg" tabindex="0" alt="Digital illustration of Stiles Stilinski from Teen Wolf.">
+                    <img src="images/gallery/ice.JPG" tabindex="0" alt="Digital drawing of Kate posing, distorted through three ice cubes.">
+                    <img src="images/gallery/the-beholder.jpg" tabindex="0" alt="Painting in purple of an eye with heavy makeup.">
+                    <img src="images/gallery/psychadelic-blue.JPG" tabindex="0" alt="Psychadelic digital illustration of a blue shark.">
+                    <img src="images/gallery/thought-stream.JPG" tabindex="0" alt="Digital illustration of multilayered text in various sizes and styles.">
+                </div>
+                <div class="button-container">
+                    <button id="slideLeft" type="button"><</button>
+                    <button id="slideRight" type="button">></button>
+                </div>
+            </section>
+
+            <section id="coaction">
+                <h2 class="light">Coaction</h2>
+                <a class="image-link" tabindex="0" href=""><div class="lightbox">
+                    <img class="home image" src="images/thumbnails/coaction.jpg"></img>
+                    <h3 class="home title dark" style="background-color: #f067a1;">Identity as Anonymity</h3>
+                </div></a>
+            </section>
+
+            <!-- footer -->
+            <section id="footer">
+                <footer-component></footer-component>
+            </section>
+        </div>
+    </body>
+</html>
