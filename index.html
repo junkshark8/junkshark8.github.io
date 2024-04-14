@@ -5,103 +5,128 @@
         <link href="style.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- scripts for reusable navbar and footer components -->
-        <script src="components/navbar.js" type="text/javascript" defer></script>
-        <!--<script src="interactions/navbar-scroll.js" type="text/javascript" defer></script>-->
+        <!-- script for reusable footer component -->
         <script src="components/footer.js" type="text/javascript" defer></script>
-        <script src="interactions/gallery-buttons.js" type="text/javascript" defer></script>
+        <!-- fa icons -->
+        <script src="https://kit.fontawesome.com/7bf45a980e.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- nav bar -->
-        <navbar-component id="navbar"></navbar-component>
+        <div class="header">
+            <li><a class="navlink home active" href="index.html" tabindex="0">HOME</a></li>
+            <nav>
+                <li><a class="navlink" href="off-the-clock.html" tabindex="0">OFF THE CLOCK</a></li>
+                <li><a class="navlink" href="gigs.html" tabindex="0">GIGS</a></li>
+                <li><a class="navlink" href="about.html" tabindex="0">ABOUT</a></li>
+            </nav>
+        </div>
        
         <div id="wrapper">
             <div class="hero-text">
-                <h1 id="page-title">Kate Doolittle</h1>
-                <div id="subtitle">Artist & Graphic Designer</div>
+                <h1>Kate Doolittle</h1>
+                <p class="subtitle">Artist & Graphic Designer</p>
             </div>
-            <section id="hero-image">
+            <section class="hero-image">
             </section>
 
             <!-- main content -->
-            <section id="themes">
-                <h2 class="light">Recurring Themes</h2>
-                <div class="lightbox-container">
-                    <a class="image-link" tabindex="0" href="body-hair.html"><div class="lightbox">
-                        <img class="home image" src="images/thumbnails/bodyhair.jpg"></img>
-                        <h3 class="home title dark" style="background-color: #f067a1;">Body Hair</h3>
-                    </div></a>
-
-                    <a class="image-link" tabindex="0" href="social-justice.html"><div class="lightbox">
-                        <img class="home image" src="images/thumbnails/socialjustice.jpg"></img>
-                        <h3 class="home title dark" style="background-color: #f8991d;">Social Justice</h3>
-                    </div></a>
-
-                    <a class="image-link" tabindex="0" href="mental-health.html"><div class="lightbox">
-                        <img class="home image" src="images/thumbnails/mentalhealth.jpg"></img>
-                        <h3 class="home title dark" style="background-color: #fedf1d;">Mental Health</h3>
-                    </div></a>
-
-                    <a class="image-link" tabindex="0" href=""><div class="lightbox">
-                        <img class="home image" src="images/thumbnails/gender&sexuality.jpg"></img>
-                        <h3 class="home title dark" style="background-color: #3db65d;">Gender & Sexuality</h3>
-                    </div></a>
-
-                    <a class="image-link" tabindex="0" href=""><div class="lightbox">
-                        <img class="home image" src="images/thumbnails/sharks.jpg"></img>
-                        <h3 class="home title dark" style="background-color: #6eceeb;">Sharks</h3>
-                    </div></a>
-
-                    <a class="image-link" tabindex="0" href=""><div class="lightbox">
-                        <img class="home image" src="images/thumbnails/trash.jpg"></img>
-                        <h3 class="home title dark" style="background-color: #8e68ad;">Trash</h3>
-                    </div></a>
+            <div class="col1">
+                <h2 class="top">Upcoming Events</h2>
+                <div class="event">
+                    <h3>Iowa Pop Art</h3>
+                    <h4>Art Fair</h4>
+                    <p class="date">May 4th, 2024 | 10 am - 6 pm</p>
+                    <p class="location">Newbo City Market<br>1100 3rd St SE, Cedar Rapids, IA</p>
+                    <p class="org">As Shark & Toad</p>
+                </div>
+                <div class="event">
+                    <h3>Reading Rooms</h3>
+                    <h4>Group Exhibition</h4>
+                    <p class="date">April 19th - May 25th, 2024</p>
+                    <p class="location">Public Space One<br>229 N. Gilbert St., Iowa City, IA</p>
+                </div>
+                <h2>Past Events</h2>
+                <div class="event">
+                    <h3>Bushy</h3>
+                    <h4>Solo Exhibition</h4>
+                    <p class="date">March 25th - 30th, 2024</p>
+                    <p class="location">Visual Arts Building | Iowa City, IA</p>
+                </div>
+                <div class="event">
+                    <h3>The First Annual Midwest Queer & Trans Zine Fest</h3>
+                    <h4>Zine Fest</h4>
+                    <p class="date">October 2023</p>
+                    <p class="location">Open Book | Minneapolis, MN</p>
+                </div>
+                <div class="event">
+                    <h3>Lib Con 3 Artist Alley</h3>
+                    <h4>Art Fair</h4>
+                    <p class="date">September 2023</p>
+                    <p class="location">Iowa City Public Library | Iowa City, IA</p>
+                </div>
+                <div class="event">
+                    <h3>The First Annual Midwestern Very Bad Art Show</h3>
+                    <h4>Group Exhibition</h4>
+                    <p class="date">August 2023</p>
+                    <p class="location">PS1 Close House | Iowa City, IA</p>
+                </div>
+                <div class="event">
+                    <h3>Iowa Arts Festival, Emerging Artist</h3>
+                    <h4>Art Fair</h4>
+                    <p class="date">June 2023</p>
+                    <p class="location">Old Capitol Town Center | Iowa City, IA</p>
+                </div>
+                <div class="event">
+                    <h3>Art Market at Big Grove</h3>
+                    <h4>Art Fair</h4>
+                    <p class="date">April 2023</p>
+                    <p class="location">Big Grove Brewery | Iowa City, IA</p>
+                </div>
+                <div class="event">
+                    <h3>ICE CREAM</h3>
+                    <h4>Zine Fest</h4>
+                    <p class="date">April 2023</p>
+                    <p class="location">PS1 Close House | Iowa City, IA</p>
+                </div>
+                <div class="event">
+                    <h3>Slow Seasons</h3>
+                    <h4>Group Exhibiton</h4>
+                    <p class="date">December 2022</p>
+                    <p class="location">The Butterfly House Gallery | Iowa City, IA</p>
+                </div>
+                <div class="event">
+                    <h3>Identity as Anonymity</h3>
+                    <h4>Group Exhibiton</h4>
+                    <p class="date">July 2022</p>
+                    <p class="location">PS1 N. Gilbert House | Iowa City, IA</p>
+                </div>
+            </div>
+            <section class="top-pad full">
+                <div class="home-container">
+                    <div class="col2">
+                        <a tabindex="0" href="body-hair.html">
+                            <div class="lightbox single">
+                                <img class="home image" src="images/thumbnails/bodyhair.jpg"></img>
+                                <h2 class="home title dark" style="background-color: var(--pink);">OFF THE CLOCK</h2>
+                            </div>
+                        </a>
+    
+                        <a tabindex="0" href="social-justice.html">
+                            <div class="lightbox single">
+                                <img class="home image" src="images/thumbnails/socialjustice.jpg"></img>
+                                <h2 class="home title dark" style="background-color: var(--orange);">GIGS</h2>
+                            </div>
+                        </a>
+    
+                        <a tabindex="0" href="mental-health.html">
+                            <div class="lightbox single bottom">
+                                <img class="home image" src="images/thumbnails/mentalhealth.jpg"></img>
+                                <h2 class="home title dark" style="background-color: var(--yellow);">ABOUT</h2>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section> 
-
-            <section id="gallery">
-                <h2 class="dark">Paintings, Drawings, Collages</h2>
-                <div id="gallery-horizontal-scroll" class="gallery-horizontal-scroll">
-                    <img src="images/gallery/am-i-dead.jpg" tabindex="0" alt="Surrealist collage. Text reads: Am I Dead?">
-                    <img src="images/gallery/baby-parts.JPG" tabindex="0" alt="Digital illustration of disembodied plastic baby limbs and head.">
-                    <img src="images/gallery/cherry-blossoms.jpg" tabindex="0" alt="Textured impressionistic painting of cherry blossoms.">
-                    <img src="images/gallery/bad-trip.jpg" tabindex="0" alt="Marker and colored pencil drawing of Kate pulling on her eyes with disembodied head and hands.">
-                    <img src="images/gallery/fish-eye.JPG" tabindex="0" alt="Digital illustration of Kate taking a selfie in the reflection of a ladle.">
-                    <img src="images/gallery/home.jpg" tabindex="0" alt="Collage of various images and colors.">
-                    <img src="images/gallery/still-waters-1.jpg" tabindex="0" alt="Abstract blue textured painting. 1  of 2.">
-                    <img src="images/gallery/still-waters-2.jpg" tabindex="0" alt="Abstract blue textured painting. 2  of 2.">
-                    <img src="images/gallery/backpack.JPG" tabindex="0" alt="Digital drawing of Kate's backpack.">
-                    <img src="images/gallery/kyle.JPG" tabindex="0" alt="Digital drawing of a Dollar General nametag. The name on the tag is Kyle.">
-                    <img src="images/gallery/basic-goods-coffee.JPG" tabindex="0" alt="Digital illustration of an iced coffee on a sunny table.">
-                    <img src="images/gallery/pants.JPG" tabindex="0" alt="Digital illustration of disembodied baggy jeans and chunky sneakers.">
-                    <img src="images/gallery/spiderman.jpg" tabindex="0" alt="Colored pencil drawing on tanned paper of Miles Morales.">
-                    <img src="images/gallery/passageway.jpg" tabindex="0" alt="Impressionistic painting of the Passageway in downtown Omaha, Nebraska.">
-                    <img src="images/gallery/howard-and-11th.jpg" tabindex="0" alt="Impressionistic painting of the street sign on the corner of Howard and 11th.">
-                    <img src="images/gallery/apple-heart.JPG" tabindex="0" alt="Digital illustration of a hand holding a human heart.">
-                    <img src="images/gallery/hang-in-there.JPG" tabindex="0" alt="Digital illustration of hands holding a cat upside down. Text reads: Hang in there!">
-                    <img src="images/gallery/give-em-lip.jpg" tabindex="0" alt="Collage of various newspaper clippings. Large text in center reads: WOMAN. Slightly smaller text at bottom reads: GIVE 'EM LIP">
-                    <img src="images/gallery/mohawk.JPG" tabindex="0" alt="Digital illustration of a person in profile with a mohawk, sticking their tongue out.">
-                    <img src="images/gallery/pirate-adjacent.jpg" tabindex="0" alt="Collage of a man with a pipe holding a bird and a sword.">
-                    <img src="images/gallery/it-was-fun.JPG" tabindex="0" alt="Digital drawing of Stu and Billy from Scream. Text reads: it was fun">
-                    <img src="images/gallery/stiles.jpg" tabindex="0" alt="Digital illustration of Stiles Stilinski from Teen Wolf.">
-                    <img src="images/gallery/ice.JPG" tabindex="0" alt="Digital drawing of Kate posing, distorted through three ice cubes.">
-                    <img src="images/gallery/the-beholder.jpg" tabindex="0" alt="Painting in purple of an eye with heavy makeup.">
-                    <img src="images/gallery/psychadelic-blue.JPG" tabindex="0" alt="Psychadelic digital illustration of a blue shark.">
-                    <img src="images/gallery/thought-stream.JPG" tabindex="0" alt="Digital illustration of multilayered text in various sizes and styles.">
-                </div>
-                <div class="button-container">
-                    <button id="slideLeft" type="button"><</button>
-                    <button id="slideRight" type="button">></button>
-                </div>
-            </section>
-
-            <section id="coaction">
-                <h2 class="light">Coaction</h2>
-                <a class="image-link" tabindex="0" href=""><div class="lightbox">
-                    <img class="home image" src="images/thumbnails/coaction.jpg"></img>
-                    <h3 class="home title dark" style="background-color: #f067a1;">Identity as Anonymity</h3>
-                </div></a>
-            </section>
 
             <!-- footer -->
             <section id="footer">
