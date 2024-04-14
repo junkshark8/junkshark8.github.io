@@ -1,3 +1,6 @@
+/* colors */
+@import url('colors.css');
+
 /* body & section */
 * {
     box-sizing: border-box;
@@ -7,8 +10,8 @@ html, body {
     padding: 0;
     margin: 0;
     height: 100%;
-    color: #262626;
-    font-family: Verdana, sans-serif;
+    color: var(--dark);
+    font-family: Futura, sans-serif;
 }
 
 #wrapper { 
@@ -21,14 +24,13 @@ section {
     position: relative;
     height: auto;
     width: 100%;
-    background-color: #262626;
 }
 
-#hero-image {
+.hero-image {
     min-height: 100%;
     position:fixed;
     top: 0;
-    background-image: url(images/hero-image.jpg);
+    background: url(images/hero-image.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,88 +38,143 @@ section {
 }
 
 .hero-text {
-    padding-top: 20px;
-    padding-bottom: 25px;
-    background-color: #fedf1d;
-    position: absolute;
+    display: block;
+    width: 75%;
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 30%;
+    padding-right: 1.25rem;
+    background-color: var(--dark);
+    color: var(--yellow);
+    position: sticky;
+    top: 21.5%;
+    z-index: 1;
+    transform: translate(0, -21.5%);
+}
+
+.top-pad {
+    margin-top: 18vh;
+    padding-bottom: 16vh;
+}
+
+.full {
+    margin-top: 85vh;
+}
+
+.header {
     width: 100%;
-    text-align: center;
-    top: 50%;
-    z-index: 1;
-    transform: translate(0, -50%);
+    display: flex;
+    position: fixed;
+    background-color: var(--yellow);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    transition: all .3s ease;
+    border-bottom: 2px solid var(--purple);
+  }
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0;
 }
 
-#themes {
-    margin-top: 100vh;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.no-hero {
-    padding-top: 100px;
+li {
+    display: inline;
+    text-align: right;
+    width: min-content;
+    white-space: nowrap;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+  }
+
+a.navlink {
+    border: 2px solid;
+    border-color: var(--purple); 
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 5px;
+  }
+
+a.navlink:hover, a.navlink:focus {
+  border: 2px dotted;
+  border-color: var(--dark);
 }
 
-#off-duty, #on-the-clock, #about, #mental-health {
-    background-color: #fedf1d;
+a.navlink.home {
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 1.25rem;
+  }
+
+a.navlink.active {
+    background-color: var(--dark);
+    color: var(--yellow);
+    border-color: var(--pink);
 }
 
-#body-hair {
-    background-color: #f067a1;
-}
-
-#social-justice {
-    background-color: #f8991d;;
-}
-
-.lightbox-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    row-gap: 0;
-    column-gap: 0;
-}
-
-#footer {
-    z-index: 1;
-}
+a.navlink.active:hover, a.navlink.active:focus {
+    background-color: var(--dark);
+    color: var(--yellow);
+    border: 2px solid var(--pink);
+    cursor: default;
+  }
 
 /* heading */
 h1 {
     padding: 0;
     margin: 0;
-    font-size: 60px;
+    font-size: 3rem;
     font-weight: 600;
 }
 
+.subtitle {
+    padding: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+    width: 100%;
+}
+
 h2 {
-    padding-top: 20px;
-    padding-bottom: 25px;
+    padding-block: 1rem;
     margin: 0;
+    width: 75%;
     text-align: center;
-    font-size: 40px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    padding-block: 1rem;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .light {
-    color: #fedf1d;
+    color: var(--yellow);
+    background-color: var(--dark);
+    margin-bottom: 1rem;
 }
 
 .dark {
-    color: #262626;
-}
-
-h3 {
-    padding-top: 20px;
-    padding-bottom: 25px;
-    margin: 0;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-#subtitle {
-    padding: 0;
-    margin: 0;
-    font-size: 20px;
-    font-weight: 300;
+    color: var(--dark);
+    background-color: var(--pink);
+    margin-bottom: 1rem;
 }
 
 .about-container {
@@ -133,36 +190,54 @@ h3 {
 
 /* basic paragraph */
 p {
-    margin-top: 0;
+    margin: 0;
     font-size: 16px;
     text-align: left;
     width: 50%;
 }
 
 /* lightbox link */
+.lightbox-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
 .lightbox {
-    background-color: #262626;
+    background-color: transparent;
     position: relative;
     width: 100%;
-    height: 100%;
-    max-height: 100;
-    max-width: 100%;
     }
     .home.image {
         display: block;
         width: 100%;
     }
     .home.title {
-        padding-top: 20px;
-        padding-bottom: 25px;
-        font-size: 40px;
-        width: 100%;
+        padding-block: 1rem;
+        width: 75%;
         position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
+        top: 15%;
+        transform: translate(0, -15%);
         text-align: center;
         transition: all .3s ease;
     }
+
+.left {
+    padding-inline: 1rem 0rem;
+}
+
+.right {
+    padding-inline: 0rem 1rem;
+}
+
+.single {
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+.bottom {
+    padding-bottom: 0;
+}
 
 .lightbox:hover {
     .home.image {
@@ -176,63 +251,133 @@ p {
     }
 }
 
-#gallery {
-    background-color: #fedf1d;
-}
-
-.gallery-horizontal-scroll {
+.home-container {
     display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
     height: 100%;
-    max-height: 100%;
+}
+
+.col1 {
+    width: 25%;
+    background-color: var(--yellow);
+    padding-inline: 1.5rem;
+    padding-bottom: 5rem;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    overflow: scroll;
+    scrollbar-color: var(--purple) var(--yellow);
+    scrollbar-width: thin;
+    z-index: 2;
+
+    h2 {
+        width: 100%;
+        text-align: left;
+        padding-block: 2rem 1rem;
+    }
+
+    .top {
+        padding-top: 5rem;
+    }
+
+    h3 {
+        text-align: left;
+        padding-block: 1rem 0.5rem;
+    }
+
+    h4 {
+        padding-block: 0.25rem;
+        margin: 0;
+    }
+
+    .event {
+        width: 100%;
+        text-align: left;
+        background-color: var(--blue);
+        border-radius: 5px;
+        padding: 0rem 1rem 1rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    hr {
+        border-top: 1px dotted;
+        border-bottom: none;
+        border-color: var(--dark);
+    }
+    
+    p {
+        width: 100%;
+        text-align: left;
+        padding-block: 0.25rem;
+    }
+
+    .org {
+        font-style: italic;
+    }
+}
+
+.col2 {
+    width: 75%;
+    margin-left: 25%;
+}
+
+.kofi-btn {
     width: 100%;
-    white-space: nowrap;
-    padding-bottom: 20px;
-    padding-inline: 15px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-}
-
-.gallery-horizontal-scroll::-webkit-scrollbar {
-    display: none;
-  }
-
-.gallery-horizontal-scroll img {
-    width: auto;
-    height: 70vh;
-    display: inline;
-    padding-inline: 15px;
-}
-
-.button-container {
-    padding-inline: 15px;
-    padding-bottom: 20px;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-button {
-    background: none;
-    border: none;
-    font-size: 50px;
-    font-weight: 600;
-    border-style: dotted;
-    border-color: #fedf1d;
-    border-width: 2px;
-}
-
-button:hover {
-    border-color: #262626;
 }
 
 /* media tags for responsiveness */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .lightbox-container {
         display: grid;
         grid-template-columns: auto;
+    }
+
+    .left, .right, .lightbox {
+        padding-inline: 1rem 1rem;
+    }
+    
+    .col1 {
+        display: none;
+    }
+
+    .col2 {
+        width: 100%;
+        margin: 0;
+    }
+
+   .hero-text {
+        padding-left: 1.25rem;
+        width: 100%;
+        text-align: center;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .top-pad {
+        padding-bottom: 8vh;
+    }
+
+    .hero-image {
+        background-position: 55%;
+    }
+
+    #footer footer {
+        position: static;
+        flex-direction: column;
+        
+        p {
+            text-align: center;
+            padding-bottom: 1rem;
+            width: 100%;
+        }      
+    }
+
+    .light {
+        width: 100%;
     }
 }
