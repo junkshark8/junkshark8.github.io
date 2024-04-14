@@ -15,18 +15,68 @@ class Footer extends HTMLElement {
         <style>
             footer {
                 width: 100%;
-                padding: 0;
-                background-color: #262626;
-                color: #fedf1d;
+                padding: 1rem 1.5rem;
+                background-color: var(--yellow);
+                color: var(--dark);
                 font-size: 14px;
                 display: flex;
-                justify-content: center;
+                position: fixed;
+                z-index: 2;
+                left: 0;
+                bottom: 0;
+                justify-content: space-between;
                 align-items: center;
+                border-top: 2px solid var(--purple);
+
+                .contact {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    margin-inline: 0.5rem;
+                    border: 2px solid;
+                    border-color: var(--purple); 
+                    border-radius: 5px;
+                    text-decoration: none;
+                    color: var(--dark);
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    height: 2rem;
+                    padding: 0.25rem;
+                  }
+
+                .edge {
+                    margin-right: 0;
+                }
+                
+                a:hover, a:focus {
+                    border-color: var(--dark);
+                    border-style: dotted;
+                  }
+
+                i {
+                    padding: 0;
+                }
             }
         </style>
-    
+            
         <footer>
-            <p>© ` + copyrightYear + ` Kate Doolittle. Hand coded by Kate Doolittle.<p>
+            <p>© ` + copyrightYear + ` Kate Doolittle. Hand coded by me, Kate Doolittle :P</p>
+            <div class='contact'>
+                <a href='https://www.instagram.com/kdoolittleart/' target='blank'>
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href='https://vimeo.com/katedoolittle' target='blank'>
+                    <i class="fab fa-vimeo"></i>
+                </a>
+                <a class='edge' href='mailto:kdoolittleart@gmail.com'>
+                <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </footer>
     `;
     }
