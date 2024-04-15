@@ -5,51 +5,82 @@
         <link href="style.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- scripts for reusable navbar and footer components -->
-        <script src="components/navbar.js" type="text/javascript" defer></script>
-        <!--<script src="interactions/navbar-scroll.js" type="text/javascript" defer></script>-->
+        <!-- script for reusable footer component -->
         <script src="components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <!-- fa icons -->
+        <script src="https://kit.fontawesome.com/7bf45a980e.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- nav bar -->
-        <navbar-component></navbar-component>
-        
-        <section id="about" class="no-hero">
-            <h2 class="dark">About</h2>
-            <div class="about-container">
-                <img class="about-image" src="images/about.jpg" alt="Sideways selfie of Kate.">
-                <p>
-                    And so comes the part where I tell you who I am. 
-                    If I had to pick some words, I'd call myself an artist, 
-                    a graphic designer, a crafter, a printmaker, a zinester, 
-                    a sewer, a student, a partner, and a shark-lover (My favorite 
-                    shark, you ask? Blue shark). I use any pronouns. 
-                    <br> <br>
-                    I'm working on a BFA in Graphic Design and a BA in Informatics at the 
-                    University of Iowa, with a minor in Latin just for the heck of it. 
-                    I also work part-time as a Graphic Designer for Student Life 
-                    Communications. When I'm not too busy with work or school, 
-                    I do the occasional fair/gallery show/exhibition to get my work 
-                    out there and keep my creative juices flowing. 
-                    <br> <br>
-                    My practice centers heavy themes like threats to the environment 
-                    and bigotry directed at women and queer people, and my identities 
-                    give me the insight and expertise to create impactful work about 
-                    these topics. I balance the gravity of my concepts with a colorful 
-                    and lighthearted touch that communicates the message in a punchy 
-                    way and keeps me sane so that I can continue doing the work. My 
-                    preferred medium is graphic design, but I love tactile techniques 
-                    like collage, printmaking, fiber arts, and performance. I value 
-                    trying new ways of creating because each technique is a new way to 
-                    communicate my concepts.
-                </p>
+        <nav>
+            <div class="topnav" id="topnav">
+                <ul>
+                    <li><a class="navlink home" href="index.html" tabindex="0">HOME</a></li>
+                    <div>
+                        <li><a class="navlink" href="off-the-clock.html" tabindex="0">OFF THE CLOCK</a></li>
+                        <li><a class="navlink" href="gigs.html" tabindex="0">GIGS</a></li>
+                        <li><a class="navlink active" href="about.html" tabindex="0">ABOUT</a></li>
+                    </div>
+                </ul>
+                <!-- hamburger icon for small screens -->
+                <a href="javascript:void(0);" class="icon" onclick="collapseMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
-        </section> 
-
-            <!-- footer -->
-            <section id="footer">
-                <footer-component></footer-component>
+        </nav>
+        
+        <div id="wrapper">
+            <section class="hero-image about">
             </section>
+
+            <!-- main content -->
+            <section id="about" class="content">
+                <h2 class="light">ABOUT</h2>
+                <div class="about-container">
+                    <div class="col1">
+                        <img class="about-image" src="images/about.jpg" alt="Sideways selfie of Kate.">
+                    </div>
+                    <div class="col2">
+                        <p>
+                            Write some stuff here that's like, witty and fun in just the right way
+                            but not too vulnerable (gross.) Don't reveal too much about yourself,
+                            but make yourself sound interesting.
+                            <br><br>
+                            Strike a perfect balance between being honest and mysterious. 
+                            Explain your art just enough to give people context but 
+                            not so much that you sound pretentious. Something like, "I make art 
+                            about the things that interest me, like sharks and gender and garbage." (perfect!) 
+                            <br><br>
+                            Make sure people know that you do other things too, like take walks in the sunshine
+                            and watch live music and pet your three cats. Be honest about your hobbies but pick
+                            the ones that are relatable.
+                            <br><br>
+                            Explain that you do have a day job, because art doesn't pay the bills, and that you
+                            expertly walk the tight-rope between being anti-establishment and being able to afford rent. 
+                            Make sure prospective employers know this won't affect your performance. 
+                            <br><br>
+                            Sign off with something short and sweet that perfectly encapsulates your essence. 
+                            (Nailed it.)
+                        </p>
+                    </div>
+                </div>
+            </section> 
+    
+                <!-- footer -->
+                <section id="footer">
+                    <footer-component></footer-component>
+                </section>
         </div>
     </body>
 </html>

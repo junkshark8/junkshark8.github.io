@@ -7,19 +7,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- script for reusable footer component -->
         <script src="components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
         <!-- fa icons -->
         <script src="https://kit.fontawesome.com/7bf45a980e.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- nav bar -->
-        <div class="header">
-            <li><a class="navlink home active" href="index.html" tabindex="0">HOME</a></li>
-            <nav>
-                <li><a class="navlink" href="off-the-clock.html" tabindex="0">OFF THE CLOCK</a></li>
-                <li><a class="navlink" href="gigs.html" tabindex="0">GIGS</a></li>
-                <li><a class="navlink" href="about.html" tabindex="0">ABOUT</a></li>
-            </nav>
-        </div>
+        <nav id="navbar">
+            <div class="topnav" id="topnav">
+                <ul>
+                    <li><a class="navlink home active" href="index.html" tabindex="0">HOME</a></li>
+                    <div>
+                        <li><a class="navlink" href="off-the-clock.html" tabindex="0">OFF THE CLOCK</a></li>
+                        <li><a class="navlink" href="gigs.html" tabindex="0">GIGS</a></li>
+                        <li><a class="navlink" href="about.html" tabindex="0">ABOUT</a></li>
+                    </div>
+                </ul>
+                <!-- hamburger icon for small screens -->
+                <a href="javascript:void(0);" class="icon" onclick="collapseMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>
        
         <div id="wrapper">
             <div class="hero-text">
@@ -30,7 +49,7 @@
             </section>
 
             <!-- main content -->
-            <div class="col1">
+            <div class="col1 home">
                 <h2 class="top">Upcoming Events</h2>
                 <div class="event">
                     <h3>Iowa Pop Art</h3>
@@ -101,27 +120,30 @@
                     <p class="location">PS1 N. Gilbert House | Iowa City, IA</p>
                 </div>
             </div>
-            <section class="top-pad full">
+            <section class="content push">
                 <div class="home-container">
-                    <div class="col2">
-                        <a tabindex="0" href="body-hair.html">
+                    <div class="col2 home">
+                        <a tabindex="0" href="off-the-clock.html">
                             <div class="lightbox single">
-                                <img class="home image" src="images/thumbnails/bodyhair.jpg"></img>
-                                <h2 class="home title dark" style="background-color: var(--pink);">OFF THE CLOCK</h2>
+                                <img class="thumbnail-bg" src="images/thumbnails/off-duty-hover.jpg"></img>
+                                <img class="thumbnail" src="images/thumbnails/off-duty.jpg"></img>
+                                <h2 class="title dark" style="background-color: var(--yellow);">OFF THE CLOCK</h2>
                             </div>
                         </a>
     
-                        <a tabindex="0" href="social-justice.html">
+                        <a tabindex="0" href="gigs.html">
                             <div class="lightbox single">
-                                <img class="home image" src="images/thumbnails/socialjustice.jpg"></img>
-                                <h2 class="home title dark" style="background-color: var(--orange);">GIGS</h2>
+                                <img class="thumbnail-bg" src="images/thumbnails/gigs-hover.jpg"></img>
+                                <img class="thumbnail" src="images/thumbnails/gigs.jpg"></img>
+                                <h2 class="title dark" style="background-color: var(--yellow);">GIGS</h2>
                             </div>
                         </a>
     
-                        <a tabindex="0" href="mental-health.html">
+                        <a tabindex="0" href="about.html">
                             <div class="lightbox single bottom">
-                                <img class="home image" src="images/thumbnails/mentalhealth.jpg"></img>
-                                <h2 class="home title dark" style="background-color: var(--yellow);">ABOUT</h2>
+                                <img class="thumbnail-bg" src="images/thumbnails/about-hover.jpg"></img>
+                                <img class="thumbnail" src="images/thumbnails/about.jpg"></img>
+                                <h2 class="title dark" style="background-color: var(--yellow);">ABOUT</h2>
                             </div>
                         </a>
                     </div>
