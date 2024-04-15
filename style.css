@@ -12,6 +12,8 @@ html, body {
     height: 100%;
     color: var(--dark);
     font-family: Futura, sans-serif;
+    scrollbar-color: var(--purple) transparent;
+    scrollbar-width: thin;
 }
 
 #wrapper { 
@@ -37,6 +39,28 @@ section {
     z-index: 0;
 }
 
+.off-the-clock {
+    min-height: 100%;
+    position:fixed;
+    top: 0;
+    background: url(images/hero-image-off.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.gigs {
+    min-height: 100%;
+    position:fixed;
+    top: 0;
+    background: url(images/hero-image-gigs.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
 .hero-text {
     display: block;
     width: 75%;
@@ -45,6 +69,7 @@ section {
     padding-bottom: 1rem;
     padding-left: 30%;
     padding-right: 1.25rem;
+    border-radius: 0px 5px 5px 0px;
     background-color: var(--dark);
     color: var(--yellow);
     position: sticky;
@@ -53,16 +78,17 @@ section {
     transform: translate(0, -21.5%);
 }
 
-.top-pad {
-    margin-top: 18vh;
-    padding-bottom: 16vh;
+.content {
+    width: 100%;
+    margin-top: 12vh;
+    padding-bottom: 5vh;
 }
 
-.full {
+.push {
     margin-top: 85vh;
 }
 
-.header {
+.topnav {
     width: 100%;
     display: flex;
     position: fixed;
@@ -70,9 +96,17 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 3;
-    transition: all .3s ease;
     border-bottom: 2px solid var(--purple);
+    border-radius: 0px 0px 5px 5px;
   }
+
+.topnav ul {
+    margin: 0;
+}
+
+.topnav a.icon {
+    display: none;
+}
 
 nav {
   display: flex;
@@ -84,6 +118,10 @@ nav {
 ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 li {
@@ -116,7 +154,6 @@ a.navlink.home {
     width: 100%;
     font-weight: 600;
     color: var(--dark);
-    font-size: 1.25rem;
   }
 
 a.navlink.active {
@@ -128,9 +165,13 @@ a.navlink.active {
 a.navlink.active:hover, a.navlink.active:focus {
     background-color: var(--dark);
     color: var(--yellow);
-    border: 2px solid var(--pink);
-    cursor: default;
+    border: 2px dotted var(--pink);
   }
+
+.icon {
+    color: var(--dark);
+    padding: 1rem;
+}
 
 /* heading */
 h1 {
@@ -150,7 +191,7 @@ h1 {
 h2 {
     padding-block: 1rem;
     margin: 0;
-    width: 75%;
+    width: 50%;
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
@@ -169,23 +210,13 @@ h3 {
     color: var(--yellow);
     background-color: var(--dark);
     margin-bottom: 1rem;
+    border-radius: 0px 5px 5px 0px;
 }
 
 .dark {
     color: var(--dark);
     background-color: var(--pink);
     margin-bottom: 1rem;
-}
-
-.about-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    row-gap: 0;
-    column-gap: 15px;
-}
-
-.about-image {
-    width: 50vw;
 }
 
 /* basic paragraph */
@@ -207,59 +238,117 @@ p {
 .lightbox {
     background-color: transparent;
     position: relative;
-    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
     }
-    .home.image {
+    .thumbnail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
         display: block;
         width: 100%;
+        opacity: 1;
+        border-radius: 5px;
     }
-    .home.title {
-        padding-block: 1rem;
-        width: 75%;
+    .thumbnail-bg {
+        display: block;
+        width: 100%;
+        opacity: 0;
+        border-radius: 5px;
+    }
+    .title {
+        padding: 1rem;
+        width: 50%;
         position: absolute;
-        top: 15%;
-        transform: translate(0, -15%);
+        top: 75%;
+        transform: translate(0, -75%);
         text-align: center;
-        transition: all .3s ease;
+        z-index: 2;
+        border-radius: 0px 5px 5px 0px;
     }
 
+.lightbox:hover, .lightbox:focus {
+    .thumbnail {
+        opacity: 0;
+    }
+    .thumbnail-bg {
+        opacity: 1;
+    }
+}
+
 .left {
-    padding-inline: 1rem 0rem;
+    margin-inline: 1rem 0rem;
 }
 
 .right {
-    padding-inline: 0rem 1rem;
+    margin-inline: 0rem 1rem;
+}
+
+.middle {
+    padding: 0;
+
+    .thumbnail {
+        margin: 0;
+    }
 }
 
 .single {
-    padding: 0rem 1rem 1rem 1rem;
+    margin: 0rem 1rem 1rem 1rem;
 }
 
 .bottom {
     padding-bottom: 0;
-}
-
-.lightbox:hover {
-    .home.image {
-        opacity: 30%;
-    }
-}
-
-.lightbox:focus {
-    .home.image {
-        opacity: 30%;
-    }
+    margin-bottom: 0;
 }
 
 .home-container {
     display: flex;
     height: 100%;
+    margin-bottom: 0;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+}
+
+.about-image {
+    height: 100%;
+    border-radius: 5px;
 }
 
 .col1 {
+    display: flex;
+    justify-content: center;
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+    padding-bottom: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.col2 {
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--yellow);
+
+    p {
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+.col1.home {
     width: 25%;
+    display: block;
     background-color: var(--yellow);
     padding-inline: 1.5rem;
+    padding-top: 1.5rem;
     padding-bottom: 5rem;
     position: fixed;
     top: 0;
@@ -267,7 +356,7 @@ p {
     overflow: scroll;
     scrollbar-color: var(--purple) var(--yellow);
     scrollbar-width: thin;
-    z-index: 2;
+    z-index: 1;
 
     h2 {
         width: 100%;
@@ -276,7 +365,7 @@ p {
     }
 
     .top {
-        padding-top: 5rem;
+        padding-top: 3.5rem;
     }
 
     h3 {
@@ -315,9 +404,13 @@ p {
     }
 }
 
-.col2 {
+.col2.home {
     width: 75%;
     margin-left: 25%;
+    margin-right: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    background-color: transparent;
 }
 
 .kofi-btn {
@@ -325,29 +418,51 @@ p {
 }
 
 /* media tags for responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .lightbox-container {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: auto auto;
+        padding-inline: 1rem;
     }
 
-    .left, .right, .lightbox {
-        padding-inline: 1rem 1rem;
+    .left, .middle, .right {
+        margin-inline: 0rem;
     }
-    
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+    }
+
     .col1 {
-        display: none;
+        margin-inline: 1rem;
+        margin-bottom: 1rem;
     }
 
     .col2 {
-        width: 100%;
-        margin: 0;
+        margin-inline: 1rem;
     }
 
-   .hero-text {
+    .about-image {
+        height: auto;
+        width: 100%;
+    }
+
+    .col1.home {
+        display: none;
+    }
+
+    .col2.home {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .hero-text {
         padding-left: 1.25rem;
         width: 100%;
         text-align: center;
+        border-radius: 0;
 
         h1 {
             font-size: 2rem;
@@ -357,9 +472,17 @@ p {
     .subtitle {
         text-align: center;
     }
+}
 
-    .top-pad {
-        padding-bottom: 8vh;
+@media (max-width: 600px) {
+    .lightbox-container {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 0;
+    }
+
+    .left, .middle, .right {
+        margin-inline: 1rem;
     }
 
     .hero-image {
@@ -367,7 +490,6 @@ p {
     }
 
     #footer footer {
-        position: static;
         flex-direction: column;
         
         p {
@@ -378,6 +500,55 @@ p {
     }
 
     .light {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    nav {
+        align-items: start;
+    }
+    
+    .topnav ul {
+        margin: 0;
+    }
+
+    .topnav ul li a {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+        padding-top: 3rem;
+        margin-bottom: 5.5rem;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive ul {
+        display: block;
+        padding-inline: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .topnav.responsive ul li a {
+        float: none;
+        display: block;
+        text-align: right;
+        width: 100%;
+    }
+
+    .topnav.responsive ul li {
+        display: block;
+        padding: 0.5rem 0rem 0.5rem 0rem;
         width: 100%;
     }
 }
