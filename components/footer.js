@@ -20,7 +20,7 @@ class Footer extends HTMLElement {
                 color: var(--dark);
                 font-size: 14px;
                 display: flex;
-                position: fixed;
+                position: relative;
                 z-index: 2;
                 left: 0;
                 bottom: 0;
