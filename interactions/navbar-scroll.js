@@ -1,4 +1,3 @@
-// !!THIS DOES NOT WORK YET!!
 // keep track of previous scroll position
 let prevScrollPos = window.pageYOffset;
 
