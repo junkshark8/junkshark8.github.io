@@ -173,6 +173,58 @@ a.navlink.active:hover, a.navlink.active:focus {
     padding: 1rem;
 }
 
+/* footer */
+footer {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: var(--yellow);
+    color: var(--dark);
+    font-size: 14px;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--purple);
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+
+    a {
+        display: flex;
+        align-items: center;
+        margin-inline: 0.5rem;
+        border: 2px solid;
+        border-color: var(--purple); 
+        border-radius: 5px;
+        text-decoration: none;
+        color: var(--dark);
+        font-size: 1.5rem;
+        font-weight: 300;
+        height: 2rem;
+        padding: 0.25rem;
+      }
+
+    .edge {
+        margin-right: 0;
+    }
+    
+    a:hover, a:focus {
+        border-color: var(--dark);
+        border-style: dotted;
+      }
+
+    i {
+        padding: 0;
+    }
+}
+
 /* heading */
 h1 {
     padding: 0;
@@ -225,6 +277,34 @@ p {
     font-size: 16px;
     text-align: left;
     width: 50%;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: left;
+    background-color: var(--yellow);
+    width: fit-content;
+    margin: 0rem 0rem 1rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 5px;
+
+    * {
+        text-wrap: nowrap;
+        width: fit-content;
+    }
+
+    .slash {
+        padding-inline: 1rem;
+    }
+
+    a{
+        text-decoration: underline var(--purple);
+        color: var(--dark);
+    }
+
+    a:hover, a:focus {
+        text-decoration: underline dotted var(--dark);
+      }
 }
 
 /* lightbox link */
@@ -331,6 +411,10 @@ p {
 }
 
 .col2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     margin-right: 1rem;
     margin-left: 0.5rem;
@@ -341,6 +425,15 @@ p {
         width: 100%;
         height: fit-content;
     }
+
+    a{
+        text-decoration: underline var(--purple);
+        color: var(--dark);
+    }
+
+    a:hover, a:focus {
+        text-decoration: underline dotted var(--dark);
+      }
 }
 
 .col1.home {
@@ -487,6 +580,10 @@ p {
 
     .hero-image {
         background-position: 55%;
+    }
+
+    .off-the-clock, .gigs, .about {
+        background-position: center;
     }
 
     #footer footer {
