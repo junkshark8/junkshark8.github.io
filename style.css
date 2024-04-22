@@ -422,6 +422,30 @@ p {
     border-radius: 5px;
     border: 2px solid var(--dark);
     margin-bottom: 1rem;
+    background-color: var(--yellow);
+}
+
+.double-image {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+
+    .image {
+        width: 100%;
+    }
+}
+
+.double-image-bottom {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+    margin-bottom: 0;
+
+    .image {
+        width: 100%;
+    }
 }
 
 .col1 {
