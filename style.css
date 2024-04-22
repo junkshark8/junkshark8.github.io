@@ -588,6 +588,7 @@ p {
     padding-right: 0;
     padding-bottom: 0;
     background-color: transparent;
+    border: none;
 }
 
 .kofi-btn {
