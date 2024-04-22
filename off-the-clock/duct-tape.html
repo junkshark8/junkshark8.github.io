@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Duct Tape</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <!-- fa icons -->
+        <script src="https://kit.fontawesome.com/7bf45a980e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <nav>
+            <div class="topnav" id="topnav">
+                <ul>
+                    <li><a class="navlink home" href="../index.html" tabindex="0">HOME</a></li>
+                    <div>
+                        <li><a class="navlink active" href="../off-the-clock.html" tabindex="0">OFF THE CLOCK</a></li>
+                        <li><a class="navlink" href="../gigs.html" tabindex="0">GIGS</a></li>
+                        <li><a class="navlink" href="../about.html" tabindex="0">ABOUT</a></li>
+                    </div>
+                </ul>
+                <!-- hamburger icon for small screens -->
+                <a href="javascript:void(0);" class="icon" onclick="collapseMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+        
+        <div id="wrapper">
+            <section class="hero-image off-the-clock">
+            </section>
+
+            <!-- main content -->
+            <section id="squirrel-cage" class="content">
+                <h2 class="light">Duct Tape</h2>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../off-the-clock.html">OFF THE CLOCK</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">Duct Tape</p>
+                </div>
+                <div class="column-container">
+                    <div class="col1">
+                        <img class="image" src="../images/off-the-clock/duct-tape/zines.jpg" 
+                        alt="A folded zine sitting on a stack of other folded zines with another stack fanned out to the side.">
+                        <img class="image" src="../images/off-the-clock/duct-tape/1.jpg" 
+                        alt="Front and back cover of the zine. It's made of orange duct tape. The text is cutout letters from 
+                        magazines and it's covered in colorful circular price tag stickers. The back is signed Junk!">
+                        <img class="image" src="../images/off-the-clock/duct-tape/2.jpg" 
+                        alt="Zine spread with text made from a combination of cutout magazine letters, sparkly letter stickers, 
+                        and sharpie. There are a few colorful circular price tag stickers on the pages. The left page is made of 
+                        orange duct tape and the right page is made of yellow.">
+                        <img class="image" src="../images/off-the-clock/duct-tape/3.jpg"
+                        alt="Zine spread with text made from a combination of cutout magazine letters, sparkly letter stickers, 
+                        and sharpie. There are a few colorful circular price tag stickers on the pages. The pages are made of 
+                        yellow duct tape.">
+                        <img class="image" src="../images/off-the-clock/duct-tape/4.jpg" 
+                        alt="Zine spread with text made from a combination of cutout magazine letters, sparkly letter stickers, 
+                        and sharpie. There are a few colorful circular price tag stickers on the pages. The left page is made of 
+                        yellow duct tape and the right page is made of orange.">
+                    </div>
+                    <div class="col2">
+                        <p>
+                            When I was young I made stuff out of duct tape
+                        </p>
+                        <br>
+                        <p>
+                            Roses, wallets, even a pair of flip flops
+                        </p>
+                        <br>
+                        <p>
+                            I made my dad take me to home depot so I could pick out fun colors
+                        </p>
+                        <br>
+                        <p>
+                            There's something poetic about the union of art & utility
+                        </p>
+                        <br>
+                        <p>
+                            Something sinister about fashioning flowers from
+                        </p>
+                        <br>
+                        <p>
+                            Plastic & rubber glue
+                        </p>
+                        <p class="blurb"><a href="../zines/duct-tape.zip" download>Download a printable copy of the zine</a></p>
+                    </div>
+                </div>
+            </section> 
+    
+                <!-- footer -->
+                <section id="footer">
+                    <footer-component></footer-component>
+                </section>
+        </div>
+    </body>
+</html>
