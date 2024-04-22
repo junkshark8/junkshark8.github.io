@@ -294,6 +294,7 @@ p {
     margin: 0rem 0rem 1rem 1rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 5px;
+    border: 2px solid var(--pink);
 
     * {
         text-wrap: nowrap;
@@ -414,12 +415,12 @@ p {
 .about-image {
     object-fit: cover;
     height: 100%;
-    border-radius: 5px;
 }
 
 .image {
     height: 100%;
     border-radius: 5px;
+    border: 2px solid var(--dark);
     margin-bottom: 1rem;
 }
 
@@ -444,6 +445,7 @@ p {
     margin-right: 1rem;
     margin-left: 0.5rem;
     border-radius: 5px;
+    border: 2px solid var(--pink);
     background-color: var(--yellow);
 
     .blurb {
@@ -505,6 +507,7 @@ p {
     scrollbar-color: var(--purple) var(--yellow);
     scrollbar-width: thin;
     z-index: 1;
+    border-radius: 0px;
 
     h2 {
         width: 100%;
@@ -531,6 +534,7 @@ p {
         text-align: left;
         background-color: var(--blue);
         border-radius: 5px;
+        border: 2px solid var(--dark);
         padding: 0rem 1rem 1rem 1rem;
         margin-bottom: 1rem;
     }
