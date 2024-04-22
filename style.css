@@ -16,6 +16,10 @@ html, body {
     scrollbar-width: thin;
 }
 
+a {
+    cursor: pointer;
+}
+
 #wrapper { 
     position: absolute;
     height: 100%;
@@ -138,7 +142,7 @@ a.navlink {
     border-color: var(--purple); 
     border-radius: 5px;
     text-decoration: none;
-    color: var(--dark);
+    color: var(--purple);
     font-size: 1rem;
     font-weight: 300;
     padding: 5px;
@@ -146,6 +150,7 @@ a.navlink {
 
 a.navlink:hover, a.navlink:focus {
   border: 2px dotted;
+  color: var(--dark);
   border-color: var(--dark);
 }
 
@@ -153,7 +158,6 @@ a.navlink.home {
     text-align: left;
     width: 100%;
     font-weight: 600;
-    color: var(--dark);
   }
 
 a.navlink.active {
@@ -204,21 +208,22 @@ footer {
         border-color: var(--purple); 
         border-radius: 5px;
         text-decoration: none;
-        color: var(--dark);
+        color: var(--purple);
         font-size: 1.5rem;
         font-weight: 300;
         height: 2rem;
         padding: 0.25rem;
       }
 
+    a:hover, a:focus {
+        border-color: var(--dark);
+        color: var(--dark);
+        border-style: dotted;
+    }
+
     .edge {
         margin-right: 0;
     }
-    
-    a:hover, a:focus {
-        border-color: var(--dark);
-        border-style: dotted;
-      }
 
     i {
         padding: 0;
@@ -266,8 +271,10 @@ h3 {
 }
 
 .dark {
-    color: var(--dark);
-    background-color: var(--pink);
+    color: var(--blue);
+    background-color: var(--dark);
+    border: 2px solid var(--dark);
+    border-left: none;
     margin-bottom: 1rem;
 }
 
@@ -299,11 +306,12 @@ p {
 
     a{
         text-decoration: underline var(--purple);
-        color: var(--dark);
+        color: var(--purple);
     }
 
     a:hover, a:focus {
         text-decoration: underline dotted var(--dark);
+        color: var(--dark);
       }
 }
 
@@ -330,12 +338,14 @@ p {
         width: 100%;
         opacity: 1;
         border-radius: 5px;
+        border: 2px solid var(--dark)
     }
     .thumbnail-bg {
         display: block;
         width: 100%;
         opacity: 0;
         border-radius: 5px;
+        border: 2px solid var(--dark)
     }
     .title {
         padding: 1rem;
@@ -354,6 +364,12 @@ p {
     }
     .thumbnail-bg {
         opacity: 1;
+    }
+
+    .dark {
+        border: 2px solid var(--pink);
+        border-left: none;
+        color: var(--yellow)
     }
 }
 
@@ -396,6 +412,7 @@ p {
 }
 
 .about-image {
+    object-fit: cover;
     height: 100%;
     border-radius: 5px;
 }
@@ -429,6 +446,15 @@ p {
     border-radius: 5px;
     background-color: var(--yellow);
 
+    .blurb {
+        padding-top: 1rem;
+    }
+
+    .signoff {
+        text-align: right;
+    }
+    
+
     p {
         width: 100%;
         height: fit-content;
@@ -437,11 +463,12 @@ p {
 
     a{
         text-decoration: underline var(--purple);
-        color: var(--dark);
+        color: var(--purple);
     }
 
     a:hover, a:focus {
         text-decoration: underline dotted var(--dark);
+        color: var(--dark);
       }
 
     h3, h4, h5 {
@@ -450,10 +477,18 @@ p {
         padding-bottom: 0.5rem;
         margin: 0;
     }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
 }
 
-.about {
-    height: 100%;
+.blurb {
+    color: var(--purple);
 }
 
 .col1.home {
@@ -528,6 +563,38 @@ p {
 
 .kofi-btn {
     width: 100%;
+}
+
+/* filtering system */
+#myBtnContainer {
+    width: 100%;
+    display: flex;
+    margin-inline: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btnSection {
+    padding-left: 2rem;
+}
+
+.btn {
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid var(--purple);
+    background-color: var(--yellow);
+    padding-block: 0.25rem;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:focus, .btn.active {
+    border: 2px dotted var(--pink);
+    background-color: var(--dark);
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.show {
+    display: block;
 }
 
 /* flipbook */
@@ -663,7 +730,7 @@ p {
         margin-inline: 0rem;
     }
 
-    .about-container {
+    .column-container {
         display: flex;
         flex-direction: column;
     }
