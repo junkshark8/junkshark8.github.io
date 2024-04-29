@@ -156,7 +156,7 @@ a.navlink {
     border-color: var(--purple); 
     border-radius: 5px;
     text-decoration: none;
-    color: var(--purple);
+    color: var(--dark);
     font-size: 1rem;
     font-weight: 300;
     padding: 5px;
@@ -164,7 +164,6 @@ a.navlink {
 
 a.navlink:hover, a.navlink:focus {
   border: 2px dotted;
-  color: var(--dark);
   border-color: var(--dark);
 }
 
@@ -312,12 +311,11 @@ p {
 
     a{
         text-decoration: underline var(--purple);
-        color: var(--purple);
+        color: var(--dark);
     }
 
     a:hover, a:focus {
         text-decoration: underline dotted var(--dark);
-        color: var(--dark);
       }
 }
 
@@ -494,12 +492,11 @@ p {
 
     a{
         text-decoration: underline var(--purple);
-        color: var(--purple);
+        color: var(--dark);
     }
 
     a:hover, a:focus {
         text-decoration: underline dotted var(--dark);
-        color: var(--dark);
       }
 
     h2, h3, h4 {
@@ -511,15 +508,27 @@ p {
     }
 
     h2 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     h4 {
-        font-size: 0.75rem;
+        font-size: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        display: block;
+
+        li {
+            width: 100%;
+            display: block;
+            text-align: left;
+            padding: 0;
+        }
     }
 }
 
