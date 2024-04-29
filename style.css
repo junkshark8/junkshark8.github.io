@@ -174,15 +174,13 @@ a.navlink.home {
   }
 
 a.navlink.active {
-    background-color: var(--dark);
-    color: var(--yellow);
-    border-color: var(--pink);
+    background-color: var(--blue);
+    border: 2px solid var(--pink);
+    color: var(--dark);
 }
 
 a.navlink.active:hover, a.navlink.active:focus {
-    background-color: var(--dark);
-    color: var(--yellow);
-    border: 2px dotted var(--pink);
+    border: 2px dotted var(--dark);
   }
 
 .icon {
@@ -275,7 +273,7 @@ h3 {
 }
 
 .dark {
-    color: var(--blue);
+    color: var(--yellow);
     background-color: var(--dark);
     border: 2px solid var(--dark);
     border-left: none;
@@ -351,7 +349,7 @@ p {
         border-radius: 5px;
         border: 2px solid var(--dark)
     }
-    .title {
+    .title.dark {
         padding: 1rem;
         width: 50%;
         position: absolute;
@@ -373,6 +371,7 @@ p {
     .dark {
         border: 2px solid var(--pink);
         border-left: none;
+        background-color: var(--dark);
         color: var(--yellow)
     }
 }
