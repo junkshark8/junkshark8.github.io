@@ -15,13 +15,13 @@ class Footer extends HTMLElement {
         <footer>
             <p>© ` + copyrightYear + ` Kate Doolittle. Hand coded by me, Kate Doolittle :P</p>
             <div class='contact'>
-                <a href='https://www.instagram.com/kdoolittleart/' target='blank'>
+                <a href='https://www.instagram.com/kdoolittleart/' target='blank' title='instagram'>
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href='https://vimeo.com/katedoolittle' target='blank'>
+                <a href='https://vimeo.com/katedoolittle' target='blank' title='vimeo'>
                     <i class="fab fa-vimeo"></i>
                 </a>
-                <a class='edge' href='mailto:kdoolittleart@gmail.com'>
+                <a class='edge' href='mailto:kdoolittleart@gmail.com' title='email'>
                 <i class="fas fa-envelope"></i>
                 </a>
             </div>
