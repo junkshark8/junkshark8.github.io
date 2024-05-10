@@ -36,7 +36,7 @@ section {
     min-height: 100%;
     position:fixed;
     top: 0;
-    background: url(images/hero-image.jpg);
+    background: url(images/hero-image.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@ section {
     min-height: 100%;
     position:fixed;
     top: 0;
-    background: url(images/hero-image-off.jpg);
+    background: url(images/hero-image-off.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@ section {
     min-height: 100%;
     position:fixed;
     top: 0;
-    background: url(images/hero-image-gigs.jpg);
+    background: url(images/hero-image-gigs.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
