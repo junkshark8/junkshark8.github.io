@@ -6,6 +6,8 @@
         <link href="style.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="components/navbar.js" type="text/javascript" defer></script>
         <!-- script for reusable footer component -->
         <script src="components/footer.js" type="text/javascript" defer></script>
         <!-- script for the hamburger menu -->
@@ -24,22 +26,7 @@
     </head>
     <body>
         <!-- nav bar -->
-        <nav id="navbar">
-            <div class="topnav" id="topnav">
-                <ul>
-                    <li><a class="navlink home active" href="index.html">HOME</a></li>
-                    <div>
-                        <li><a class="navlink" href="off-the-clock.html">OFF THE CLOCK</a></li>
-                        <li><a class="navlink" href="gigs.html">GIGS</a></li>
-                        <li><a class="navlink" href="about.html">ABOUT</a></li>
-                    </div>
-                </ul>
-                <!-- hamburger icon for small screens -->
-                <a href="javascript:void(0);" class="icon" onclick="collapseMenu()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </nav>
+        <navbar-component></navbar-component>
        
         <div id="wrapper">
             <div class="hero-text">
@@ -53,17 +40,11 @@
             <div class="col1 home">
                 <h2 class="top">Upcoming Events</h2>
                 <div class="event">
-                    <h3>Iowa Pop Art</h3>
+                    <h3>Lib Con 4: Artist Alley</h3>
                     <h4>Art Fair</h4>
-                    <p class="date">May 4th, 2024 | 10 am - 6 pm</p>
+                    <p class="date">August 10th, 2024 | TBD</p>
                     <p class="location">Newbo City Market<br>1100 3rd St SE, Cedar Rapids, IA</p>
                     <p class="org">As Shark & Toad</p>
-                </div>
-                <div class="event">
-                    <h3>Arts Fest</h3>
-                    <h4>Open House</h4>
-                    <p class="date">May 3rd, 2024 | 3 - 7 pm</p>
-                    <p class="location">Visual Arts Building<br>107 River St. Iowa City, IA</p>
                 </div>
                 <div class="event">
                     <h3>Reading Rooms</h3>
@@ -72,6 +53,12 @@
                     <p class="location">Public Space One<br>229 N. Gilbert St., Iowa City, IA</p>
                 </div>
                 <h2>Past Events</h2>
+                <div class="event">
+                    <h3>Arts Fest</h3>
+                    <h4>Open House</h4>
+                    <p class="date">May 3rd, 2024 | 3 - 7 pm</p>
+                    <p class="location">Visual Arts Building<br>107 River St. Iowa City, IA</p>
+                </div>
                 <div class="event">
                     <h3>Bushy</h3>
                     <h4>Solo Exhibition</h4>
@@ -162,5 +149,21 @@
                 <footer-component></footer-component>
             </section>
         </div>
+    <script>
+        // Get the container element
+        var navContainer = document.getElementById("nav-container");
+
+        // Get all links with class="navlink" inside the container
+        var links = navContainer.getElementsByClassName("navlink");
+
+        // Loop through the links and add the active class to the current/clicked link
+        for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+        }
+    </script>
     </body>
 </html>

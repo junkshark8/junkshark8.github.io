@@ -6,6 +6,8 @@
         <link href="style.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="components/navbar.js" type="text/javascript" defer></script>
         <!-- script for reusable footer component -->
         <script src="components/footer.js" type="text/javascript" defer></script>
         <!-- script for the hamburger menu -->
@@ -24,22 +26,7 @@
     </head>
     <body>
        <!-- nav bar -->
-       <nav>
-        <div class="topnav" id="topnav">
-            <ul>
-                <li><a class="navlink home" href="index.html" tabindex="0">HOME</a></li>
-                <div>
-                    <li><a class="navlink" href="off-the-clock.html" tabindex="0">OFF THE CLOCK</a></li>
-                    <li><a class="navlink active" href="gigs.html" tabindex="0">GIGS</a></li>
-                    <li><a class="navlink" href="about.html" tabindex="0">ABOUT</a></li>
-                </div>
-            </ul>
-            <!-- hamburger icon for small screens -->
-            <a href="javascript:void(0);" class="icon" onclick="collapseMenu()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </nav>
+       <navbar-component></navbar-component>
         
         <div id="wrapper">
             <section class="hero-image gigs">

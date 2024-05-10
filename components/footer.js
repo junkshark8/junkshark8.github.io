@@ -19,10 +19,10 @@ class Footer extends HTMLElement {
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href='https://vimeo.com/katedoolittle' target='blank' title='vimeo'>
-                    <i class="fab fa-vimeo"></i>
+                    <i class="fab fa-vimeo-v"></i>
                 </a>
                 <a class='edge' href='mailto:kdoolittleart@gmail.com' title='email'>
-                <i class="fas fa-envelope"></i>
+                    <i class="far fa-envelope"></i>
                 </a>
             </div>
         </footer>
