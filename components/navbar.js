@@ -13,7 +13,7 @@ class Navbar extends HTMLElement {
     <nav id="navbar">
       <div class="topnav" id="topnav">
           <ul id="nav-container">
-              <li><a class="navlink home" href="index.html">HOME</a></li>
+              <li><a class="navlink home" href="/">HOME</a></li>
               <div>
                   <li><a class="navlink" href="off-the-clock.html">OFF THE CLOCK</a></li>
                   <li><a class="navlink" href="gigs.html">GIGS</a></li>
