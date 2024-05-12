@@ -6,6 +6,8 @@
         <link href="../style.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
         <!-- script for reusable footer component -->
         <script src="../components/footer.js" type="text/javascript" defer></script>
         <!-- script for the hamburger menu -->
@@ -24,22 +26,7 @@
     </head>
     <body>
         <!-- nav bar -->
-        <nav>
-            <div class="topnav" id="topnav">
-                <ul>
-                    <li><a class="navlink home" href="../index.html" tabindex="0">HOME</a></li>
-                    <div>
-                        <li><a class="navlink active" href="../off-the-clock.html" tabindex="0">OFF THE CLOCK</a></li>
-                        <li><a class="navlink" href="../gigs.html" tabindex="0">GIGS</a></li>
-                        <li><a class="navlink" href="../about.html" tabindex="0">ABOUT</a></li>
-                    </div>
-                </ul>
-                <!-- hamburger icon for small screens -->
-                <a href="javascript:void(0);" class="icon" onclick="collapseMenu()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </nav>
+        <navbar-component></navbar-component>
         
         <div id="wrapper">
             <section class="hero-image off-the-clock">
@@ -57,38 +44,38 @@
                 </div>
                 <div class="column-container">
                     <div class="col1">
-                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/rotary.jpg" 
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/rotary.webp" 
                         alt="The zine standing on a pedestal. It's been bound rotary-style to emulate the 
                         jail, with each spread making up a pie wedge. The front facing spread is a full-spread photo of 
                         the inside of one of the cells, and has a paper floor with a QR code on it.">
-                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/zines.jpg" 
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/zines.webp" 
                         alt="A saddle stitch version of the zine standing on a stack of more zines.">
-                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/cover.jpg" 
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/cover.webp" 
                         alt="Front and back covers of a zine titled The Squirrel Cage Jail. The front
                         has collaged images of the inside and outside of the jail in black and white. 
                         The title text is in a mismatch font with various old-timey letterforms.">
-                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread1.jpg" 
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread1.webp" 
                         alt="First spread of the zine. There are collaged images of a girl in a graduation 
                         cap standing in solitary confinement, a postcard with the jail on the front, the metal 
                         sign outside of the jail, and a patent for the rotary jail design. The text wraps around 
                         the images. Headings are in the same font as the title, and body text is in an old typewriter font.">
-                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread2.jpg"
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread2.webp"
                         alt="Second spread of the zine. On the left is a full page collage with an image of someone turning 
                         the hand crank, an image of a mannequin inside one of the cells, and another image from the design 
                         patent. On the right page is text.">
-                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread3.jpg" 
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread3.webp" 
                         alt="Third spread of the zine. The backing images on this spread are pieces of Kate's third grade homework, 
                         a list of Council Bluffs land marks. The first listed is the 'Squirl Cage Jail'. Layered on top are images from 
                         the 1932 Farmers' Holiday Strike.">
-                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread4.jpg" 
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread4.webp" 
                         alt="Forth spread of the zine. It's a full spread black and white posterized image of one of the jail cells. 
                         It's wedge shaped and the back of the cell is very narrow. It has bunk beds on the left.">
-                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread5.jpg" 
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread5.webp" 
                         alt="Fifth spread of the zine. It continues the content on the farmers' strike with more images.">
-                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread6.jpg" 
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread6.webp" 
                         alt="Sixth spread of the zine. It has a QR code and an image of George 'Baby Face' Nelson on the left, 
                         and a newsclipping about the farm strike and an image of a black squirrel on the right.">
-                        <img class="image bottom" src="../images/off-the-clock/the-squirrel-cage/spread7.jpg" 
+                        <img class="image" src="../images/off-the-clock/the-squirrel-cage/spread7.webp" 
                         alt="Final spread of the zine. The masthead of The Militant, a communist publication from the 1930s, 
                         goes across the top of the whole spread. The pages have clippings from the paper about the farmers' strike in Iowa.">
                     </div>

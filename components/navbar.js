@@ -13,7 +13,7 @@ class Navbar extends HTMLElement {
     <nav id="navbar">
       <div class="topnav" id="topnav">
           <ul id="nav-container">
-              <li><a class="navlink home active" href="index.html">HOME</a></li>
+              <li><a class="navlink home" href="index.html">HOME</a></li>
               <div>
                   <li><a class="navlink" href="off-the-clock.html">OFF THE CLOCK</a></li>
                   <li><a class="navlink" href="gigs.html">GIGS</a></li>
@@ -27,6 +27,23 @@ class Navbar extends HTMLElement {
       </div>
     </nav>
       `;
+    // javascript for active navlinks
+
+    // get the end of the url
+    const currentLocation = location.href;
+    // get nav links
+    const navLink = document.querySelectorAll('a');
+    // get nav menu length
+    const menuLength = navLink.length
+
+    //iterate through nav links
+    for (var i = 0; i < menuLength; i++) {
+      if (navLink[i].href === currentLocation) {
+        console.log(currentLocation);
+        navLink[i].className += ' active'
+      }
+    }
+
   }
 }
 

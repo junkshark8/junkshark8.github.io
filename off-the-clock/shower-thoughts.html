@@ -6,6 +6,8 @@
         <link href="../style.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
         <!-- script for reusable footer component -->
         <script src="../components/footer.js" type="text/javascript" defer></script>
         <!-- script for vimeo video player -->
@@ -26,22 +28,7 @@
     </head>
     <body>
         <!-- nav bar -->
-        <nav>
-            <div class="topnav" id="topnav">
-                <ul>
-                    <li><a class="navlink home" href="../index.html" tabindex="0">HOME</a></li>
-                    <div>
-                        <li><a class="navlink active" href="../off-the-clock.html" tabindex="0">OFF THE CLOCK</a></li>
-                        <li><a class="navlink" href="../gigs.html" tabindex="0">GIGS</a></li>
-                        <li><a class="navlink" href="../about.html" tabindex="0">ABOUT</a></li>
-                    </div>
-                </ul>
-                <!-- hamburger icon for small screens -->
-                <a href="javascript:void(0);" class="icon" onclick="collapseMenu()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </nav>
+        <navbar-component></navbar-component>
         
         <div id="wrapper">
             <section class="hero-image off-the-clock">
@@ -60,37 +47,37 @@
                 <div class="column-container">
                     <div class="col1">
                         <div class="double-image">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/2.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/2.webp" 
                             alt="Shower curtain hanging from a curtain rod on a white wall. Printed on the inner 
                             muslin curtain in pink, red, and black are images of razor blades and text about body 
                             hair removal. There's a plastic curtain in front of the print.">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/3.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/3.webp" 
                             alt="The curtain pulled to one side as if open.">
                         </div>
-                        <img class="image" src="../images/off-the-clock/shower-thoughts/1.jpeg" 
+                        <img class="image" src="../images/off-the-clock/shower-thoughts/1.webp" 
                             alt="Close up of the top corner of the curtain. The text reads &quot;Bring a sharpened 
                             blade to the precious curves of your body and try not to make yourself bleed.&quot; 
                             The text is printed sideways and layered with images of razor blades.">
                         
                         <div class="double-image">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/5.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/5.webp" 
                             alt="Close up of the curtain with the same printed text. There are green &quot;x&quot; 
                             shaped stitches holding the sections of the muslin curtain together.">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/6.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/6.webp" 
                             alt="Close up of the curtain. Layers of razor blade images are printed over each other.">
                         </div>
-                        <img class="image" src="../images/off-the-clock/shower-thoughts/4.jpeg" 
+                        <img class="image" src="../images/off-the-clock/shower-thoughts/4.webp" 
                         alt="Close up of the curtain. The same text has been printed with some part removed. 
                         It reads, &quot;sharpened the precious curves of make yourself.&quot;">
                         <div class="double-image">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/8.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/8.webp" 
                             alt="Close up of the curtain. A hand holding a razor blade has been printed over itself, 
                             slightly offset, in red and black">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/9.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/9.webp" 
                             alt="Close up of the bottom corner of the curtain. The muslin curtain is longer than the 
                             clear plastic curtain.">
                         </div>
-                        <img class="image" src="../images/off-the-clock/shower-thoughts/7.jpeg" 
+                        <img class="image" src="../images/off-the-clock/shower-thoughts/7.webp" 
                         alt="Close up of the curtain showing the green stitching holding the pieces of the muslin curtain together.">
                         <div style="padding:56.25% 0 0 0;position:relative;margin-bottom:1rem;">
                             <iframe src="https://player.vimeo.com/video/825605786?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
@@ -99,33 +86,33 @@
                             title="Shower Thoughts: V2"></iframe>
                         </div>
                         <div class="double-image">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/10.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/10.webp" 
                             alt="Shower with curtain slightly open. On the outer curtain is a poem printed in pink and red ink.">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/11.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/11.webp" 
                             alt="Close up of shower curtain with a poem printed in pink and red ink. 
                             &quot;When did bath time become shower time? When did shower time become a chore? When did a rubber
                             duck become a razor blade? I don't think I want to do this anymore!&quot; &quot;Think I&quot; is 
                             crossed out and there are three childlike drawings of butterflies surrounding the poem.">
                         </div>
-                        <img class="image" src="../images/off-the-clock/shower-thoughts/15.jpeg" 
+                        <img class="image" src="../images/off-the-clock/shower-thoughts/15.webp" 
                         alt="Close up of mirror and open shower. There are mustaches drawn on the mirror and text that reads: Wear your hair!
                         There's sheer blue fabric inside the shower.">
                         <div class="double-image">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/13.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/13.webp" 
                             alt="Corner with a pink painting hanging above a shelf. On the shelf are three rubber ducks surrounding a 
                             safety razor. Hanging on a hook on the other wall is a section from a pair of orange zip-off pants.">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/14.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/14.webp" 
                             alt="Close up of shelf with rubber ducks and safety razor. Two ducks are out of focus in the foreground, 
                             with the razor in focus in the middle.">
                         </div>
-                        <img class="image" src="../images/off-the-clock/shower-thoughts/12.jpeg" 
+                        <img class="image" src="../images/off-the-clock/shower-thoughts/12.webp" 
                         alt="Mirror selfie of Kate. The mirror says &quot;Wear your hair!&quot; in expo markers and there are four facial 
                         hair variations for the viewer to stand in front of. Kate is standing in front of a pink mustache.">
-                        <div class="double-image-bottom">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/16.jpeg" 
+                        <div class="double-image">
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/16.webp" 
                             alt="The bottom part of the curtain from inside the shower. The blue sheer fabric is draped partially 
                             in front of the camera.">
-                            <img class="image" src="../images/off-the-clock/shower-thoughts/17.jpeg" 
+                            <img class="image" src="../images/off-the-clock/shower-thoughts/17.webp" 
                             alt="Close up of a doodle of a flower on the clear plastic curtain.">
                         </div>
                     </div>

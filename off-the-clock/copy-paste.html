@@ -6,6 +6,8 @@
         <link href="../style.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
         <!-- script for reusable footer component -->
         <script src="../components/footer.js" type="text/javascript" defer></script>
         <!-- script for the hamburger menu -->
@@ -24,22 +26,7 @@
     </head>
     <body>
         <!-- nav bar -->
-        <nav>
-            <div class="topnav" id="topnav">
-                <ul>
-                    <li><a class="navlink home" href="../index.html" tabindex="0">HOME</a></li>
-                    <div>
-                        <li><a class="navlink active" href="../off-the-clock.html" tabindex="0">OFF THE CLOCK</a></li>
-                        <li><a class="navlink" href="../gigs.html" tabindex="0">GIGS</a></li>
-                        <li><a class="navlink" href="../about.html" tabindex="0">ABOUT</a></li>
-                    </div>
-                </ul>
-                <!-- hamburger icon for small screens -->
-                <a href="javascript:void(0);" class="icon" onclick="collapseMenu()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </nav>
+        <navbar-component></navbar-component>
         
         <div id="wrapper">
             <section class="hero-image off-the-clock">
@@ -57,18 +44,18 @@
                 </div>
                 <div class="column-container">
                     <div class="col1">
-                        <img class="image" src="../images/off-the-clock/copy-paste/zines.jpg" 
+                        <img class="image" src="../images/off-the-clock/copy-paste/zines.webp" 
                         alt="A folded zine sitting on a fanned out stack of other folded and unfolded zines.">
-                        <img class="image" src="../images/off-the-clock/copy-paste/1.jpg" 
+                        <img class="image" src="../images/off-the-clock/copy-paste/1.webp" 
                         alt="Front and back cover of the zine. The front cover has an American flag with red stripes 
                         of dripping blood and bullet holes for stars. Over the flag is the zine title: COPY PASTE">
-                        <img class="image" src="../images/off-the-clock/copy-paste/2.jpg" 
+                        <img class="image" src="../images/off-the-clock/copy-paste/2.webp" 
                         alt="Zine spread with a scribbly ballpoint pen drawing of Joe Biden on the left. He has 
                         red Xs over his eyes. To his right is a quote.">
-                        <img class="image" src="../images/off-the-clock/copy-paste/3.jpg"
+                        <img class="image" src="../images/off-the-clock/copy-paste/3.webp"
                         alt="Zine spread with a scribbly ballpoint pen drawing of Ronald Reagan on the left. He has 
                         red Xs over his eyes. To his right is a quote.">
-                        <img class="image" src="../images/off-the-clock/copy-paste/4.jpg" 
+                        <img class="image" src="../images/off-the-clock/copy-paste/4.webp" 
                         alt="Zine spread with a scribbly ballpoint pen drawing of Bill Clinton on the left. He has 
                         red Xs over his eyes. To his right is a quote.">
                     </div>
