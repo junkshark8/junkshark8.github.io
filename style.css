@@ -251,10 +251,10 @@ footer {
 
 /* heading */
 h1.light {
-    padding-block: 1rem;
-    width: 25%;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    width: fit-content;
     color: var(--yellow);
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     font-weight: 600;
     background-color: var(--dark);
@@ -265,7 +265,7 @@ h1.light {
 h2 {
     padding-block: 1rem;
     margin: 0;
-    width: 50%;
+    width: 100%;
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
@@ -364,15 +364,16 @@ p {
         border: 2px solid var(--dark)
     }
     .title.dark {
-        padding: 1rem;
-        width: 75%;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        width: fit-content;
+        max-width: 90%;
         position: absolute;
-        top: 75%;
-        -ms-transform: translate(0, -75%);
-        -webkit-transform: translate(0, -75%);
-        -moz-transform: translate(0, -75%);
-        -o-transform: translate(0, -75%);
-        transform: translate(0, -75%);
+        top: 90%;
+        -ms-transform: translate(0, -90%);
+        -webkit-transform: translate(0, -90%);
+        -moz-transform: translate(0, -90%);
+        -o-transform: translate(0, -90%);
+        transform: translate(0, -90%);
         text-align: center;
         z-index: 2;
         border-radius: 0px 5px 5px 0px;

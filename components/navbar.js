@@ -43,7 +43,15 @@ class Navbar extends HTMLElement {
         navLink[i].className += ' active'
       }
     }
-
+    // hamburger menu
+    function collapseMenu() {
+        var x = document.getElementById("topnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
   }
 }
 
