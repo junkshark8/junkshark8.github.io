@@ -22,7 +22,7 @@ class Navbar extends HTMLElement {
           </ul>
           <!-- hamburger icon for small screens -->
           <a href="javascript:void(0);" class="icon" onclick="collapseMenu()" title="toggle menu">
-              <img alt="" id="bars" class="fa-icon" src="images/bars.svg" aria-hidden="true"></img>
+              <img alt="" id="bars" class="fa-icon" src="../images/bars.svg" aria-hidden="true"></img>
           </a>
       </div>
     </nav>
