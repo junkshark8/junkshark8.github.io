@@ -22,7 +22,7 @@ class Navbar extends HTMLElement {
           </ul>
           <!-- hamburger icon for small screens -->
           <a href="javascript:void(0);" class="icon" onclick="collapseMenu()">
-              <i class="fa fa-bars"></i>
+              <img id="bars" class="fa-icon" src="images/bars.svg"></img>
           </a>
       </div>
     </nav>
@@ -42,15 +42,6 @@ class Navbar extends HTMLElement {
         console.log(currentLocation);
         navLink[i].className += ' active'
       }
-    }
-    // hamburger menu
-    function collapseMenu() {
-        var x = document.getElementById("topnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
     }
   }
 }
