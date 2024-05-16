@@ -161,7 +161,7 @@ li {
 
 a.navlink {
     border: 2px solid;
-    border-color: var(--purple); 
+    border-color: var(--pink); 
     border-radius: 5px;
     text-decoration: none;
     color: var(--dark);
@@ -186,10 +186,6 @@ a.navlink.active {
     border: 2px solid var(--pink);
     color: var(--yellow);
 }
-
-a.navlink.active:hover, a.navlink.active:focus {
-    border: 2px dotted var(--pink);
-  }
 
 .icon {
     color: var(--dark);
@@ -236,8 +232,7 @@ footer {
 }
 
 .contact a:hover, .contact a:focus {
-    border-color: var(--dark);
-    color: var(--dark);
+    border-color: var(--purple);
     border-style: dotted;
 }
 
@@ -317,9 +312,9 @@ p {
 }
 
 .breadcrumb a {
-    text-decoration: underline var(--purple);
+    text-decoration: underline var(--pink);
     text-decoration-thickness: 2px;
-    -webkit-text-decoration: underline var(--purple);
+    -webkit-text-decoration: underline var(--pink);
     -webkit-text-decoration-thickness: 2px;
     color: var(--dark);
 }
@@ -343,25 +338,14 @@ p {
     background-color: transparent;
     position: relative;
     max-width: 100%;
+    max-height: fit-content;
     border-radius: 5px;
+    border: 2px solid var(--dark);
+    background-color: var(--pink);
     }
     .thumbnail {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
         display: block;
         width: 100%;
-        opacity: 1;
-        border-radius: 5px;
-        border: 2px solid var(--dark)
-    }
-    .thumbnail-bg {
-        display: block;
-        width: 100%;
-        opacity: 0;
-        border-radius: 5px;
-        border: 2px solid var(--dark)
     }
     .title.dark {
         padding: 1rem 1.5rem 1rem 1.5rem;
@@ -381,17 +365,12 @@ p {
 
 .lightbox:hover, .lightbox:focus {
     .thumbnail {
-        opacity: 0;
+        mix-blend-mode: luminosity;
+        opacity: 80%;
     }
-    .thumbnail-bg {
-        opacity: 1;
-    }
-
     .dark {
-        border: 2px solid var(--pink);
+        border: 2px dotted var(--dark);
         border-left: none;
-        background-color: var(--dark);
-        color: var(--yellow)
     }
 }
 
@@ -506,9 +485,9 @@ p {
 }
 
 .col2 a {
-    text-decoration: underline var(--purple);
+    text-decoration: underline var(--pink);
     text-decoration-thickness: 2px;
-    -webkit-text-decoration: underline var(--purple);
+    -webkit-text-decoration: underline var(--pink);
     -webkit-text-decoration-thickness: 2px;
     color: var(--dark);
 }
@@ -628,42 +607,6 @@ p {
     padding-bottom: 0;
     background-color: transparent;
     border: none;
-}
-
-.kofi-btn {
-    width: 100%;
-}
-
-/* filtering system */
-#myBtnContainer {
-    width: 100%;
-    display: flex;
-    margin-inline: 1rem;
-    margin-bottom: 1rem;
-}
-
-.btnSection {
-    padding-left: 2rem;
-}
-
-.btn {
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 2px solid var(--purple);
-    background-color: var(--yellow);
-    padding-block: 0.25rem;
-    cursor: pointer;
-}
-
-.btn:hover, .btn:focus, .btn.active {
-    border: 2px dotted var(--pink);
-    background-color: var(--dark);
-    color: var(--yellow);
-    cursor: pointer;
-}
-
-.show {
-    display: block;
 }
 
 /* media tags for responsiveness */
