@@ -117,11 +117,9 @@ section {
 .topnav {
     width: 100%;
     display: flex;
-    position: fixed;
     background-color: var(--yellow);
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
     border-bottom: 2px solid var(--purple);
     border-radius: 0px 0px 5px 5px;
   }
@@ -146,9 +144,13 @@ section {
 
 nav {
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: flex-end;
   width: 100%;
+  height: fit-content;
   padding: 0;
+  z-index: 2;
 }
 
 ul {
@@ -370,7 +372,7 @@ p {
         -o-transform: translate(0, -90%);
         transform: translate(0, -90%);
         text-align: center;
-        z-index: 2;
+        z-index: 1;
         border-radius: 0px 5px 5px 0px;
     }
 
