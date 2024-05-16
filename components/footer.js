@@ -16,13 +16,13 @@ class Footer extends HTMLElement {
             <p>© ` + copyrightYear + ` Kate Doolittle. Hand coded by me, Kate Doolittle :P</p>
             <div class='contact'>
                 <a href='https://www.instagram.com/kdoolittleart/' target='blank' title='instagram'>
-                    <img class="fa-icon grow" src="images/instagram.svg" aria-hidden="true"></img>
+                    <img alt="" class="fa-icon grow" src="images/instagram.svg" aria-hidden="true"></img>
                 </a>
                 <a href='https://vimeo.com/katedoolittle' target='blank' title='vimeo'>
-                    <img class="fa-icon grow" src="images/vimeo-v.svg" aria-hidden="true"></img>
+                    <img alt="" class="fa-icon grow" src="images/vimeo-v.svg" aria-hidden="true"></img>
                 </a>
                 <a class='edge' href='mailto:kdoolittleart@gmail.com' title='email'>
-                    <img class="fa-icon grow" src="images/envelope.svg" aria-hidden="true"></img>
+                    <img alt="" class="fa-icon grow" src="images/envelope.svg" aria-hidden="true"></img>
                 </a>
             </div>
         </footer>
