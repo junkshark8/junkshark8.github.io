@@ -15,7 +15,7 @@ class Footer extends HTMLElement {
         <footer>
             <p>© ` + copyrightYear + ` Kate Doolittle. Hand coded by me, Kate Doolittle :P</p>
             <div class='contact'>
-                <a href='https://www.instagram.com/kdoolittleart/' target='blank'
+                <a href='https://www.instagram.com/kdoolittleart/' target='blank'>
                     <img alt="instagram" class="fa-icon grow" src="images/instagram.svg" aria-hidden="true"></img>
                 </a>
                 <a href='https://vimeo.com/katedoolittle' target='blank'>
