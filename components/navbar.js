@@ -39,7 +39,9 @@ class Navbar extends HTMLElement {
     //iterate through nav links
     for (var i = 0; i < menuLength; i++) {
       if (navLink[i].href === currentLocation) {
-        console.log(currentLocation);
+        navLink[i].className += ' active'
+      }
+      else if (navLink[i].href === '/') {
         navLink[i].className += ' active'
       }
     }

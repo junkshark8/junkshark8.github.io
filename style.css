@@ -233,7 +233,7 @@ footer {
     align-items: center;
     margin-inline: 0.5rem;
     border: 2px solid;
-    border-color: var(--purple); 
+    border-color: var(--pink); 
     border-radius: 5px;
     text-decoration: none;
     color: var(--dark);
@@ -244,7 +244,7 @@ footer {
 }
 
 .contact a:hover, .contact a:focus {
-    border-color: var(--purple);
+    border-color: var(--dark);
     border-style: dotted;
 }
 
