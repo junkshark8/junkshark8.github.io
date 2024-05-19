@@ -228,6 +228,10 @@ footer {
     width: fit-content;
 }
 
+.pad {
+    padding-top: 1rem;
+}
+
 .contact a {
     display: flex;
     align-items: center;
@@ -254,6 +258,11 @@ footer {
 
 .contact .edge {
     margin-right: 0;
+}
+
+.credit {
+    display: flex;
+    align-items: center;
 }
 
 /* heading */
@@ -579,6 +588,20 @@ p {
     border: 2px solid var(--dark);
     padding: 0rem 1rem 1rem 1rem;
     margin-bottom: 1rem;
+}
+
+.col1.home a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.col1.home a:active {
+    color: var(--dark)
+}
+
+.col1.home .event.hover:hover {
+    background-color: var(--pink);
+    cursor: pointer;
 }
 
 .col1.home .org {
