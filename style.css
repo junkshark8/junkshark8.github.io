@@ -65,6 +65,17 @@ section {
     z-index: 0;
 }
 
+.construction {
+    min-height: 100%;
+    position:fixed;
+    top: 0;
+    background: url(images/hero-image-construction.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
 .hero-text {
     display: block;
     width: 75%;
@@ -98,6 +109,18 @@ section {
     font-size: 1.25rem;
     font-weight: 300;
     width: 100%;
+}
+
+.fit {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    width: fit-content;
+    color: var(--yellow);
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: var(--dark);
+    margin-bottom: 1rem;
+    border-radius: 0px 5px 5px 0px;
 }
 
 .content {
@@ -219,6 +242,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     border-top: 2px solid var(--purple);
+}
+
+.fixed {
+    position: fixed;
+    bottom: 0px;
 }
 
 .contact {

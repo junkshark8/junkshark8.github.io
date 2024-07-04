@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Oops!</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+       
+        <div id="wrapper">
+            <div class="hero-text fit">
+                <h1>Oops!</h1>
+                <p class="subtitle">Check back later, this page is under construction</p>
+            </div>
+            <section class="hero-image construction">
+            </section>
+
+            <section class="content">
+                <div class="placeholder">
+                </div>
+            </section>
+
+            <!-- footer -->
+            <section id="footer" class="footer fixed">
+                <footer-component></footer-component>
+            </section>
+        </div>
+    </body>
+</html>
