@@ -609,9 +609,10 @@ p {
 }
 
 .col1.home .event {
+    color: var(--yellow);
     width: 100%;
     text-align: left;
-    background-color: var(--blue);
+    background-color: var(--purple);
     border-radius: 5px;
     border: 2px solid var(--dark);
     padding: 0rem 1rem 1rem 1rem;
@@ -630,6 +631,11 @@ p {
 .col1.home .event.hover:hover {
     background-color: var(--pink);
     cursor: pointer;
+}
+
+.col1.home .event.past {
+    color: var(--dark);
+    background-color: var(--yellow);
 }
 
 .col1.home .org {
