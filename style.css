@@ -818,4 +818,9 @@ p {
         padding: 0.5rem 0rem 0.5rem 0rem;
         width: 100%;
     }
+
+    .light {
+        max-width: 75%;
+        text-wrap: wrap;
+    }
 }
