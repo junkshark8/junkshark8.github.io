@@ -194,6 +194,15 @@ li {
     padding-inline: 1.5rem;
   }
 
+ol {
+    padding: 0;
+}
+
+ol li {
+    display: list-item;
+    padding: 0;
+}
+
 a.navlink {
     border: 2px solid;
     border-color: var(--pink); 

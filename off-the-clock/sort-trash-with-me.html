@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sort Trash With Me!</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image off-the-clock">
+            </section>
+
+            <!-- main content -->
+            <section id="bushy" class="content">
+                <h1 class="light">Sort Trash With Me!</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../off-the-clock.html">OFF THE CLOCK</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">Sort Trash With Me!</p>
+                </div>
+                <div class="column-container">
+                    <div class="col1">
+                        <div class="double-image">
+                            <img class="image" src="../images/off-the-clock/sort-trash-w-me/5.webp" 
+                            alt="Close up of trash inside a brown paper bag.">
+                            <img class="image" src="../images/off-the-clock/sort-trash-w-me/6.webp" 
+                            alt="A brown paper bag filled with trash leaning against a bench. A blue reach 
+                            extender is laying across the bench.">
+                        </div>
+                        <img class="image" src="../images/off-the-clock/sort-trash-w-me/1.webp" 
+                        alt="Still from a video of 'Sort Trash With Me!' Kate and their classmates are 
+                        sorting trash that has been dumped on a pedestal in the Visual Arts Building.">
+                        <img class="image" src="../images/off-the-clock/sort-trash-w-me/3.webp" 
+                        alt="Still from a video of 'Sort Trash With Me!' Kate and their classmates are 
+                        sorting trash that has been dumped on a pedestal in the Visual Arts Building.">
+                        <img class="image" src="../images/off-the-clock/sort-trash-w-me/2.webp" 
+                        alt="Still from a video of 'Sort Trash With Me!' Kate and their classmates are 
+                        sorting trash that has been dumped on a pedestal in the Visual Arts Building.">
+                        <img class="image" src="../images/off-the-clock/sort-trash-w-me/4.webp" 
+                            alt="Two brown paper bags and two recycled jars full of categorized trash, 
+                            and a pile of used blue nitrile gloves.">
+                        <div style="padding:56.25% 0 0 0;position:relative;margin-bottom:1rem;">
+                            <iframe src="https://player.vimeo.com/video/711313312?h=89d9dcec7f&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:5px;border:2px solid var(--dark);" 
+                            title="Shower Thoughts: V2"
+                            loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <p>
+                            For this performance project I took a leisurely walk around my neighborhood and Iowa City, 
+                            ending at the Visual Arts Building for my Intermedia class. I used a reach extender to pick up 
+                            discarded things I found on the ground. I followed some loose rules on my walk: 
+                        </p>
+                        <ol>
+                            <li>Pick up everything* you find</li>
+                            <li>When the bag is full, stop</li>
+                        </ol>
+                        <p style="font-style: italic">*Exclude food, broken glass, and anything that will not fit in the bag</p>
+                        <br>
+                        <p>When the bag was full, I went to class. I set up signs to direct participants to wear gloves and sort 
+                            the trash into three categories: 
+                        </p>
+                        <ol>
+                            <li>Three-Dimensional Things</li>
+                            <li>Flat Things</li>
+                            <li>Tiny Bits of Things</li>
+                        </ol>
+                        <p>I invited my classmates to help me sort, and we got to work, backed by a track I had made of bird calls 
+                            and garbage trucks.
+                        </p>
+                        <br>
+                        <p>This performance marks the beginning of my use of trash as a medium. From what I gathered I saved whatever remnants 
+                            were salvagable (including used gloves) and used them for collage and sculpture, but I still have plenty of trash 
+                            from this project to work with. I enjoy turning something that's been discarded into something valuable again, especially 
+                            if it means getting garbage off the street.
+                        </p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
