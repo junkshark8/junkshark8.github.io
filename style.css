@@ -833,4 +833,8 @@ p {
         display: block;
         margin-bottom: 0;
     }
+
+    .about-image {
+        margin-bottom: 0;
+    }
 }
