@@ -827,4 +827,8 @@ p {
     .breadcrumb {
         display: none;
     }
+
+    .double-image {
+        display: block;
+    }
 }
