@@ -823,4 +823,8 @@ p {
         max-width: 75%;
         text-wrap: wrap;
     }
+
+    .breadcrumb {
+        display: none;
+    }
 }
