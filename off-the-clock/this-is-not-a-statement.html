@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>THIS IS NOT A STATEMENT</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for vimeo video player -->
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image off-the-clock">
+            </section>
+
+            <!-- main content -->
+            <section id="bushy" class="content">
+                <h1 class="light">THIS IS NOT A STATEMENT</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../off-the-clock.html">OFF THE CLOCK</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">THIS IS NOT A STATEMENT</p>
+                </div>
+                <div class="column-container">
+                    <div class="col1">
+                        <img class="image" src="../images/off-the-clock/this-is-not-a-statement/2.webp" 
+                            alt="Still from 'THIS IS NOT A STATEMENT' of Kate wearing black shorts, a tan crop top, 
+                            and a mascara mustache. They have one arm raised to reveal pit hair and are checking themselves 
+                            out in the mirror.">
+                        <img class="image" src="../images/off-the-clock/this-is-not-a-statement/3.webp" 
+                        alt="Close up of Kate's mouth with mascara on his mustache.">
+                        <img class="image" src="../images/off-the-clock/this-is-not-a-statement/5.webp" 
+                        alt="Kate is looking into the camera with a mascara mustache on, trying on a green beret.">
+                        <img class="image" src="../images/off-the-clock/this-is-not-a-statement/4.webp" 
+                        alt="Kate is making faces at the camera, squishing his mouth together with his fingers.">
+                        <img class="image" src="../images/off-the-clock/this-is-not-a-statement/1.webp" 
+                        alt="Wide still of Kate's room. She's sitting in a pink chair to the right side of the frame, air drumming.">
+                        <div style="padding:56.25% 0 0 0;position:relative;margin-bottom:1rem;">
+                            <iframe src="https://player.vimeo.com/video/690677271?h=eb1c4308e1&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:5px;border:2px solid var(--dark);" 
+                            title="THIS IS NOT A STATEMENT: V2"
+                            loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <p>
+                            Choosing not to remove your body hair doesn't have to be a statement or a rebellion against social norms 
+                            (though to be clear, statements and rebellions are rad). Sometimes, body hair is simply a form of 
+                            self-expression. THIS IS NOT A STATEMENT is the beginning of my work about body hair and planted the seed 
+                            for what ultimately became my <a href="bushy.html">BFA show.</a> Here's to body hair as an accessory!
+                        </p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
