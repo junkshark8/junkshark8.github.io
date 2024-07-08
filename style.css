@@ -709,6 +709,7 @@ p {
     .about-image {
         height: auto;
         width: 100%;
+        margin-bottom: 0;
     }
 
     .col1.home {
@@ -831,10 +832,6 @@ p {
 
     .double-image {
         display: block;
-        margin-bottom: 0;
-    }
-
-    .about-image {
         margin-bottom: 0;
     }
 }
