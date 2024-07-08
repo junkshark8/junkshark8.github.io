@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sharkz (from A to Z)</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image off-the-clock">
+            </section>
+
+            <!-- main content -->
+            <section id="bushy" class="content">
+                <h1 class="light">Sharkz (from A to Z)</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../off-the-clock.html">OFF THE CLOCK</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">Sharkz (from A to Z)</p>
+                </div>
+                <div class="column-container">
+                    <div class="col1">
+                        <img class="image" src="../images/off-the-clock/sharkz/1.webp" 
+                        alt="Front view of a three-dimensional collage on a painted board. It's made of miscellaneous 
+                        trash, including strings of beads, plastic, and a circus cutout from a children's book.">
+                        <img class="image" src="../images/off-the-clock/sharkz/2.webp" 
+                        alt="Front view of a three-dimensional collage on a painted board. It's made of miscellaneous 
+                        trash, including strings of beads, plastic, and a circus cutout from a children's book.">
+                        <img class="image" src="../images/off-the-clock/sharkz/3.webp" 
+                        alt="Front view of a three-dimensional collage on a painted board. It's made of miscellaneous 
+                        trash, including strings of beads, plastic, and a circus cutout from a children's book.">
+                    </div>
+                    <div class="col2">
+                        <p>
+                            I love sharks. My favorite shark, you ask? Blue shark. People are often surprised when I tell them 
+                            there are over 500 species of shark, so I made this accordian alphabet book to enlighten you to a few. I had 
+                            to get a little creative for a couple of letters, but I'm okay with bending the rules for such a cool animal.
+                        </p>
+                        <br>
+                        <p>I have plenty more shark projects that aren't on this website, so feel free to 
+                            <a href="https://www.instagram.com/kdoolittleart/">check them out</a> on my instagram.
+                        </p>
+                        <br>
+                        <p class="blurb"><a href="https://issuu.com/katedoolittle/docs/sharkz_from_a_to_z_digital" target="blank">Check out a digital copy of the book</a></p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
