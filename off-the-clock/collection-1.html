@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Collection 1</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image off-the-clock">
+            </section>
+
+            <!-- main content -->
+            <section id="bushy" class="content">
+                <h1 class="light">Collection 1</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../off-the-clock.html">OFF THE CLOCK</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">Collection 1</p>
+                </div>
+                <div class="column-container">
+                    <div class="col1">
+                        <div class="double-image">
+                            <img class="image" src="../images/off-the-clock/collection-1/1.webp" 
+                            alt="Left angle view of a three-dimensional collage on a painted board. It's made of miscellaneous 
+                            trash, including strings of beads, plastic, and a circus cutout from a children's book.">
+                            <img class="image" src="../images/off-the-clock/collection-1/2.webp" 
+                            alt="Right angle view of a three-dimensional collage on a painted board. It's made of miscellaneous 
+                            trash, including strings of beads, plastic, and a circus cutout from a children's book.">
+                        </div>
+                        <img class="image" src="../images/off-the-clock/collection-1/3.webp" 
+                        alt="Front view of a three-dimensional collage on a painted board. It's made of miscellaneous 
+                        trash, including strings of beads, plastic, and a circus cutout from a children's book.">
+                        <div class="double-image">
+                            <img class="image" src="../images/off-the-clock/collection-1/4.webp" 
+                            alt="Close up of a mass of strung beads and plastic">
+                            <img class="image" src="../images/off-the-clock/collection-1/5.webp" 
+                            alt="Close up of tangled fishing line hanging in front of pink irridescent plastic.">
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <p>
+                            Glue some garbage on a board call that art
+                        </p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
