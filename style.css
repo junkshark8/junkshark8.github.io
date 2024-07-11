@@ -387,9 +387,10 @@ p {
 /* lightbox link */
 .lightbox-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
     column-gap: 1rem;
+    padding-inline: 1rem;
 }
 
 .lightbox {
@@ -430,22 +431,6 @@ p {
     .dark {
         border: 2px dotted var(--dark);
         border-left: none;
-    }
-}
-
-.left {
-    margin-inline: 1rem 0rem;
-}
-
-.right {
-    margin-inline: 0rem 1rem;
-}
-
-.middle {
-    padding: 0;
-
-    .thumbnail {
-        margin: 0;
     }
 }
 
@@ -696,10 +681,6 @@ p {
         padding-inline: 1rem;
     }
 
-    .left, .middle, .right {
-        margin-inline: 0rem;
-    }
-
     .column-container {
         display: flex;
         flex-direction: column;
@@ -750,10 +731,6 @@ p {
         display: grid;
         grid-template-columns: auto;
         padding: 0;
-    }
-
-    .left, .middle, .right {
-        margin-inline: 1rem;
     }
 
     .hero-image {
