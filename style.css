@@ -65,6 +65,19 @@ section {
     z-index: 0;
 }
 
+.gig-project {
+    text-align: center;
+    width: fit-content;
+    text-wrap: wrap;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--dark);
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--pink);
+    color: var(--dark)
+}
+
 .construction {
     min-height: 100%;
     position:fixed;
