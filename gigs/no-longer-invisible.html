@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>No Longer Invisible</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+       <!-- nav bar -->
+       <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image gigs">
+            </section>
+
+            <!-- main content -->
+            <section class="content">
+                <h1 class="light">No Longer Invisible</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../gigs.html">GIGS</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">No Longer Invisible</p>
+                </div>
+
+                <h2 class="gig-project">Event Promo</h2> 
+                <div class="column-container">
+                    <div class="col1 no-pad">
+                        <img class="image" src="../images/gigs/apahm_2023/1.webp" 
+                        alt="Digital display with a teal and tan collage of images treated with a circular duotone pattern. 
+                        Imagery includes folliage, flowers, and koi fish. The title is set in a typewriter font on 
+                        illustrated paper scraps in white, yellow, and coral. It reads, 'Asian Pacific American Heritage Month: No Longer Invisible.' The dates 
+                        are below: 'Friday, March 31 - Sunday, April 31.' There's a QR code in the bottom left and a footer with more
+                        information.">
+                        <img class="image" src="../images/gigs/apahm_2023/2.webp" 
+                        alt="Digital display with the same collage in the background and the event title in the top right 2/3rds of the composition. 
+                        There's a logo for the Asian Pacific American Cultural Center in the top left corner. In the middle is a calendar for a 
+                        week of events, with the event information set on white paper scraps.">
+                    </div>
+                    <div class="col2 plain">
+                        <img class="image" src="../images/gigs/apahm_2023/3.webp"
+                        alt="Mockup of an instagram post with the same collage and event title, posted on the uiowaapacc account. The caption 
+                        reads Asian Pacific American Heritage Month is here!">
+                        <img class="image" src="../images/gigs/apahm_2023/4.webp" 
+                        alt="Mockup of a second instagram post with a single day event set on a white background. The collage overlaps on the left and top 
+                        and the event title is at the top of the graphic.">
+                    </div>
+
+                </div>
+            </section> 
+
+            <!-- footer -->
+            <section id="footer">
+                <footer-component></footer-component>
+            </section>
+        </div>
+    </body>
+</html>

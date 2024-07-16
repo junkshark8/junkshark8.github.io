@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rewriting Reality</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image gigs">
+            </section>
+
+            <!-- main content -->
+            <section class="content">
+                <h1 class="light">Rewriting Reality</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../gigs.html">GIGS</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">Rewriting Reality</p>
+                </div>
+
+                <h2 class="gig-project">Marching Band Show Graphics</h2>
+                <div class="column-container">
+                    <div class="col1 no-pad">
+                        <img class="image" src="../images/gigs/bold-in-b&g/5.webp" 
+                        alt="Digital display with a black background overlayed with a transparent tracing of Kinnick Stadium. On the right is 
+                        the 2022 homecoming logo. To the left is save the date information in a distressed font. 
+                        Text below that directs you to the schedule of events on the web.">
+                        <img class="image" src="../images/gigs/bold-in-b&g/2.webp" 
+                        alt="Mockup of a cream colored short-sleeve t-shirt printed in black with the homecoming wordmark on the lapel, the 
+                        Iowa logo on the sleeve, and gameday information on the back in a bordered box.">
+                        <img class="image" src="../images/gigs/bold-in-b&g/7.webp" 
+                        alt="Digital display with a black background overlayed with a transparent tracing of Kinnick Stadium. On the left is the 
+                        Homecoming wordmark and dates. On the right is an application call for homecoming royalty and scholarships, with application 
+                        information in a bordered box.">
+                        <img class="image" src="../images/gigs/bold-in-b&g/3.webp" 
+                        alt="Mockup of a black colored long-sleeve t-shirt printed in white and gold with the homecoming logo on the lapel, the 
+                        Iowa logo on the sleeve, and gameday information on the back in a bordered box.">
+                        <img class="image" src="../images/gigs/bold-in-b&g/4.webp" 
+                        alt="Homecoming event schedule. It has the same background as the digital displays, with the homecoming logo, game information, 
+                        blurb, and website link in a column in the left third of the composition. The right third is a schedule of the week's events.">
+                    </div>
+                    <div class="col2 plain">
+                        <img class="image" src="../images/gigs/bold-in-b&g/1.webp"
+                        alt="Homecoming logo on a white background. It's black with gold accents. The text reads, '2022 Homecoming, 
+                        Rewriting Reality' in vintage decorative fonts. The text is enclosed in a double border with the word 'Gold' in script 
+                        breaking out of the bottom right corner and an illustration of Nile Kinnick breaking out of the right side.">
+                        <img class="image" src="../images/gigs/bold-in-b&g/9.webp" 
+                        alt="Mockup of a homecoming collector's button. It has the same background as the other materials and 
+                        includes the logo with the border removed and the illustration of Nile Kinnick blown up larger. It also includes 
+                        game day information.">
+                        <img class="image" src="../images/gigs/bold-in-b&g/8.webp" 
+                        alt="Vertical event schedule. The logo takes up the entire width at the top of the composition with the homecoming 
+                        blurb below it, followed by a two-column schedule of the week's events.">
+                        <img class="image" src="../images/gigs/bold-in-b&g/12.webp" 
+                        alt="Homecoming wordmark on a white background. It's almost identical to the logo but with the illustration of Nile 
+                        Kinnick removed.">
+                        <img class="image" src="../images/gigs/bold-in-b&g/10.webp" 
+                        alt="Mockup of homecoming committee lanyards. The front has the same dark background as the other materials with the 
+                        wordmark at the top and the member's name and title below that in the same fonts as the wordmark. It also includes the dates 
+                        of homecoming week and gameday information. The back of the lanyard is a cream background with the Kinnick stadium overlay. 
+                        It includes 2022 Contact information for members.">
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
