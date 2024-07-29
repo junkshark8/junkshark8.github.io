@@ -4,6 +4,7 @@
 /* body & section */
 * {
     box-sizing: border-box;
+    word-break: break-word;
   }
 
 html, body {
@@ -66,15 +67,16 @@ section {
 }
 
 .gig-project {
-    text-align: center;
+    text-align: left;
     width: fit-content;
+    max-width: 85%;
     text-wrap: wrap;
     padding: .5rem 1rem;
     margin-bottom: 1rem;
     border: 2px solid var(--dark);
     border-left: none;
     border-radius: 0px 5px 5px 0px;
-    background-color: var(--pink);
+    background-color: var(--blue);
     color: var(--dark)
 }
 
@@ -418,7 +420,7 @@ p {
     max-height: fit-content;
     border-radius: 5px;
     border: 2px solid var(--dark);
-    background-color: var(--pink);
+    background-color: var(--purple);
     }
     .thumbnail {
         display: block;
@@ -493,7 +495,6 @@ p {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 1rem;
-    margin-bottom: 1rem;
 
     .image {
         width: 100%;
@@ -627,10 +628,10 @@ p {
 }
 
 .col1.home .event {
-    color: var(--yellow);
+    color: var(--dark);
     width: 100%;
     text-align: left;
-    background-color: var(--purple);
+    background-color: var(--blue);
     border-radius: 5px;
     border: 2px solid var(--dark);
     padding: 0rem 1rem 1rem 1rem;
@@ -646,8 +647,12 @@ p {
     color: var(--dark)
 }
 
+.col1.home .event.hover {
+    border: 2px solid var(--pink);
+}
+
 .col1.home .event.hover:hover {
-    background-color: var(--pink);
+    border: 2px dotted var(--dark);
     cursor: pointer;
 }
 
@@ -783,11 +788,6 @@ p {
         }      
     }
 
-    .light {
-        width: 100%;
-        border-radius: 0;
-    }
-
     nav {
         align-items: start;
     }
@@ -834,5 +834,13 @@ p {
         display: block;
         padding: 0.5rem 0rem 0.5rem 0rem;
         width: 100%;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    .light {
+        max-width: 85%;
     }
 }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HMH</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image gigs">
+            </section>
+
+            <!-- main content -->
+            <section class="content">
+                <h1 class="light">HMH</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../gigs.html">GIGS</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">HMH</p>
+                </div>
+
+                <h2 class="gig-project">The Daily Iowan,
+                    <span style="font-size: 1.25rem;">Amplify</span></h2>
+                <div class="column-container">
+                    <div class="col1">
+                        <img class="image" src="../images/gigs/the-di/2.webp" 
+                        alt="Front page of The Daily Iowan with a full-width above-the-fold photo of Andre Wright and Jason Sole. Both are wearing 
+                        white hoodies with black block text that reads, 'HUMANIZE MY HOODIE.' The photo background fades to white with Andre and 
+                        Jason standing on a pile of rubble, their heads slightly covering the 'Amplify' section nameplate at the top of the page. 
+                        The story title is below the photo, with the last word, 'Hoodie,' in green and all caps, overlapping the photo. The page includes 
+                        a secondary photo of Andre and Jason and a calendar of virtual community events on campus."> 
+                    </div>
+                    <div class="col2">
+                        <p style="font-style: italic;">
+                            Wednesday, December 9, 2020
+                        </p>
+                        <br>
+                        <h2>Humanize my Hoodie</h2>
+                        <p style="font-size: 1.25rem;">What began as a hashtag to destigmatize hoodies has grown into a global movement, 
+                            including an appearance at New York Fashion Week and nationwide ally workshops.</p>
+                        <br>
+                        <p style="font-style: italic;">
+                            BY KENNEDY COOK
+                            Guest Writer
+                        </p>
+                        <br>
+                        <p style="font-style: italic;">This piece was originally published in the fall 2020 edition of NURU, 
+                            a publication by the Unity Chapter of the National Association of Black Journalists at the University of Iowa. 
+                            This work is available to The Daily Iowan through a content sharing partnership between NABJ and the DI. 
+                            To learn more about NABJ’s NURU, email co-editors Nichole Shaw and Grant Glover.</p>
+                        <br>
+                        <p>
+                            When dynamic duo Andre Wright and Jason Sole first met up on the basketball courts in Waterloo, Iowa, 
+                            back in 1994, they had no idea that their teamwork would ignite radical change both on and off the court. 
+                            The two went their separate ways over the years; Wright pursued his fashion aspirations through designing and 
+                            launching his own brands, while formerly incarcerated Sole used his voice and experience to transform the world 
+                            of academia. A few years down the line, the two rekindled their friendship, after Sole created a Facebook post, 
+                            birthing the #Humanizemyhoodie hashtag.</p>
+                            <br>
+                        <p>The hashtag was created to pay homage to teenager Trayvon Martin, who was fatally killed in his hoodie.  As a tribute to Martin, 
+                            Sole, now a college professor at Hamline University pledged to wear a hoodie to class every day for a semester. By doing so, 
+                            Sole hoped for faculty, staff, and students to see the garment in direct contrast to what many others viewed as a threat. 
+                            Through Wright’s passion for design and fashion and Sole’s aspirations for racial activism, the two birthed what we know today 
+                            to be the Humanize My Hoodie campaign.</p>
+                            <br>
+                        <p>What started as a hashtag, transformed into a design and is now considered a global movement, and Humanize My Hoodie (HMH) has 
+                            continued to spark change since its conception on Sept. 9. The timeline from Sole’s Facebook post to the first production of hoodies 
+                            was less than two weeks, creators explained. The hoodies were a hit as family, friends, and supporters buoyed the brand. Both Wright 
+                            and Sole stayed true to their roots and central purpose—even when their project gained national traction.</p>
+                            <br>
+                        <p>After a year of hoodie sales, both Wright and Sole decided it was time to take it up-a-notch by creating national ally workshops. 
+                            These workshops provide a comprehensive course on the Humanize My Hoodie campaign’s approach to preventing racist attacks on Black people, 
+                            Indigenous people, and other people of color. These workshops allude to all individuals, however, they are pertinent to professionals 
+                            in a wide array of backgrounds, such as public health, mental health, juvenile justice, criminal justice, education, higher education, 
+                            foster care and more. Workshop facilitators educate by using historical analysis, case law, theory and application opportunities, lectures, 
+                            transformative assignments and self-care breaks to maximize learning potential.</p>
+                            <br>
+                        <p>The two did not stop here, as emphasizing the virtuosity and art behind the brand was also important to them. Originally, the photos HMH had 
+                            taken were strictly for marketing purposes. However, Wright and Sole saw fit that they turn them into an art exhibit. Their first art show 
+                            was in the Saint Paul Public Library in Minneapolis. Eventually, the two strategically combined the art exhibits and ally training to showcase 
+                            all the work HMH was doing in a central location. As time went on, and the impact of HMH continued to grow, the team decided to take its movement 
+                            to New York Fashion Week in September 2019.</p>
+                            <br>
+                        <p>“We had a number of supporters coming from Minnesota and Iowa,” Wright said. “It was the first time many of those people had ever been to a fashion show, 
+                            New York City, or even been on an airplane.”</p>
+                            <br>
+                        <p>In true HMH fashion, the movement continued to grow by producing a book (HMH Book) and documentary (HMH Documentary) in December 2019.  The book release 
+                            was perfectly timed for the Essence Summit that year in Atlanta, Georgia, Stole explained.  While there, the two made many connections, including with 
+                            Jameel Spencer, former Rocawear Chief Marketing Officer, who extolled their writings. The two later traveled to Phoenix, where they held two sold-out 
+                            screenings of their documentary and gained traction globally.</p>
+                            <br>
+                        <p>Using a multitude of different designs dating back to ancient Greece and Rome, HMH has expanded its work over the past three years through multiple art 
+                            exhibitions, workshops, a novel, documentary, and New York Fashion Week. Through it all, Sole and Wright discovered how to create something bigger than 
+                            the two of them.</p> 
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
