@@ -7,6 +7,11 @@
     word-break: break-word;
   }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -180,6 +185,16 @@ section {
     height: 100%;
 }
 
+.calendar {
+    display: none;
+    z-index: 2;
+}
+
+.calendar:hover {
+    border: 2px dotted;
+    cursor: pointer;
+}
+
 nav {
   display: flex;
   position: fixed;
@@ -188,7 +203,7 @@ nav {
   width: 100%;
   height: fit-content;
   padding: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 ul {
@@ -260,7 +275,7 @@ footer {
     font-size: 14px;
     display: flex;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     bottom: 0;
     justify-content: space-between;
@@ -291,10 +306,6 @@ footer {
     border: 2px solid;
     border-color: var(--pink); 
     border-radius: 5px;
-    text-decoration: none;
-    color: var(--dark);
-    font-size: 1.5rem;
-    font-weight: 300;
     height: 2rem;
     padding: 0.25rem;
 }
@@ -619,7 +630,7 @@ p {
     overflow: scroll;
     scrollbar-color: var(--purple) var(--yellow);
     scrollbar-width: thin;
-    z-index: 1;
+    z-index: 2;
     border-radius: 0px;
 }
 
@@ -758,6 +769,30 @@ p {
 
     .subtitle {
         text-align: center;
+    }
+
+    .calendar {
+        display: flex;
+        background-color:var(--blue);
+        align-items: center;
+        border: 2px solid;
+        border-color: var(--dark); 
+        border-radius: 5px;
+        height: 2rem;
+        width: 32px;
+        padding: 0.25rem;
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .col1.home.open {
+        display: block;
+        width: calc(100% - 2rem);
+        margin-inline: 1rem;
+        height: calc(100% - 4rem);
+        border-radius: 0 0 5px 5px;
+        padding-bottom: 1rem;
     }
 }
 

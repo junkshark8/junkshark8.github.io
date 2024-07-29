@@ -23,8 +23,33 @@
                 }
             }
         </script>
+        <script>
+            function displayCalendar() {
+                var x = document.getElementById("calendar")
+                if (x.className === "col1 home") {
+                    x.className += " open";
+                    document.getElementById("cal").src="images/xmark.svg";
+                    scrollTop =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+                    scrollLeft =
+                        window.pageXOffset ||
+                        document.documentElement.scrollLeft,
+ 
+                    // if any scroll is attempted,
+                    // set this to the previous value
+                    window.onscroll = function () {
+                        window.scrollTo(scrollLeft, scrollTop);
+                };
+                } else {
+                    x.className = "col1 home";
+                    document.getElementById("cal").src="images/calendar-alt-regular.svg";
+                    window.onscroll = function () { };
+                }
+            }
+        </script>
     </head>
-    <body>
+    <body id="body">
         <!-- nav bar -->
         <navbar-component></navbar-component>
        
@@ -34,10 +59,13 @@
                 <p class="subtitle">Artist & Graphic Designer</p>
             </div>
             <section class="hero-image">
+            
             </section>
-
             <!-- main content -->
-            <div class="col1 home">
+            <a href="javascript:void(0);" class="icon" onclick="displayCalendar()" title="toggle calendar">
+            <img id="cal" alt="calendar" class="fa-icon grow calendar" src="images/calendar-alt-regular.svg"></img>
+            </a>
+            <div id="calendar" class="col1 home">
                 <h2 class="top">Upcoming Events</h2>
                 <div class="event">
                     <h3>Fashion Fest</h3>
