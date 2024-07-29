@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Colorz</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image off-the-clock">
+            </section>
+
+            <!-- main content -->
+            <section class="content">
+                <h1 class="light">Colorz</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../off-the-clock.html">OFF THE CLOCK</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">Colorz</p>
+                </div>
+                <div class="column-container">
+                    <div class="col1">
+                        <img class="image" src="../images/off-the-clock/colorz/9.webp" 
+                        alt="Mockup of an open spread and the front cover of Colorz magazine. The cover has a black background with an illustration 
+                        of a pair of colorful, crying eyes by Rocio. The title is set in a pink warped font, and yellow and purple impressions 
+                        of the title are pulling away from the background where it's most warped. There are colorful squiggles around the top, bottom, and right edges of the cover. 
+                        The spread has a pale yellow background with bright pink and yellow squiggles around it. The word 'Dope' in pale pink goes across 
+                        the top left of the spread. There's text on the page which is set around a large cutout image of Rocio's hand holding a sculpted head.">
+                        <img class="image" src="../images/off-the-clock/colorz/1.webp" 
+                        alt="Special edition tufted cover. The colorful squiggles around the cover have been cut away and replaced with the same pattern in tufted 
+                        yarn.">
+                        <img class="image" src="../images/off-the-clock/colorz/2.webp" 
+                        alt="The table of contents spread of the magazine on a black background. The top text reads: 'Featuring Rocio Cabrera and Tori Wheeler.' The table of contents is 
+                        too small to read. The facing page features the cover image with no title text.">
+                        <img class="image" src="../images/off-the-clock/colorz/3.webp" 
+                        alt="Magazine spread with a light pink background and a two-page photo of Rocio. There are bright pink and yellow squiggles going behind and in front 
+                        of the photo. The page includes Rocio's full name, pronouns (she/her), instagram account, website, and has a credit for the photo.">
+                        <img class="image" src="../images/off-the-clock/colorz/4.webp" 
+                        alt="Magazine spread with a light purple background with bright indigo and coral squiggles. The page includes an story titled 'An interview with unapologetic 
+                        artist Rocio Marie'. The world 'unapologetic' has been set in the magazine title font. The inteview was done by Kiara Cristina Ventura and was originally published by 
+                        PROCESSA x THE ECSTATIC, formerly ArtsyWindows x The Experience Magazine. The interview is dated April 13, 2017 and the interview text is too small to read. An image 
+                        of Rocio's 'ACAB' necklaces starts on the first page, going off the bottom, and resumes at the top of the second page.">
+                        <img class="image" src="../images/off-the-clock/colorz/5.webp" 
+                        alt="Magazine spread with a light pink background and bright pink and yellow squiggles around the page. The title text reads: 'EARRINGS' and there are 
+                        cutout images of 6 of Rocio's earring designs. The first are three teeth each on a silver ring, the second are a pair of marijuana leaves with eyes, the third 
+                        are cow print stars with rainbow pom poms hanging from them, the fourth are rainbows with holographic clouds, the fifth are holographic speach bubbles that say, 'DEADASS?', 
+                        and the sixth are green slimes with slime drops hanging down.">
+                        <img class="image" src="../images/off-the-clock/colorz/6.webp" 
+                        alt="Magazine spread with a light orange background and a photo of Tori. There are bright purple and orange squiggles going behind and in front 
+                        of the photo. The page includes Tori's full name, pronouns (they/them), instagram account, website, and has a credit for the photo.">
+                        <img class="image" src="../images/off-the-clock/colorz/7.webp" 
+                        alt="Magazine spread with a pale yellow background and bright pink and yellow squiggles around the page. It has interview text continued from another page that's too small 
+                        to read. On the left side of the first page and the right side of the second page are images from Tori's thesis work.">
+                        <img class="image" src="../images/off-the-clock/colorz/8.webp" 
+                        alt="Magazine spread with a light teal background and bright teal and purple squiggles around the page. It includes two photos from Tori's URL project, which was a jewelry 
+                        brand that recognizes young people exist both physically and digitally. The models in the photos are wearing large colorful acrylic earrings with digital themes.">
+                    </div>
+                    <div class="col2">
+                        <p>
+                            Introducing the coolest fake magazine you've ever seen! Colorz is a 62 page artist mag featuring Rocio Cabrera and Tori Wheeler. 
+                            I compiled interviews from online sources and images from the artists to create a magazine with bright colors, funky shapes, and 
+                            a hand-tufted special edition cover.
+                        </p>
+                        <br>
+                        <div class='contact pad'>
+                            <div class="credit" style="margin-right: 5px; display: block;">
+                                <div style="display: flex; margin-bottom: 10px">
+                                    <a href='https://www.instagram.com/rociomarie__/' target='blank'>
+                                        <img alt="Instagram" class="fa-icon grow" src="../images/instagram.svg"></img>
+                                    </a>
+                                    <a href='https://www.rocioart.com/' target='blank'>
+                                        <img alt="Website" class="fa-icon grow" src="../images/hand-pointer.svg"></img>
+                                    </a>
+                                </div>
+                                <p style="text-align: center;">Rocio</p>
+                            </div>
+                            <div class="credit" style="margin-right: 5px; display: block;">
+                                <div style="display: flex; margin-bottom: 10px">
+                                    <a href='https://www.instagram.com/special_funeral/' target='blank'>
+                                        <img alt="Instagram" class="fa-icon grow" src="../images/instagram.svg"></img>
+                                    </a>
+                                    <a href='https://toriwheeler.com/' target='blank'>
+                                        <img alt="Website" class="fa-icon grow" src="../images/hand-pointer.svg"></img>
+                                    </a>
+                                </div>
+                                <p style="text-align: center;">Tori</p>
+                            </div>
+                        </div>
+                        <br>
+                        <p class="blurb"><a href="https://issuu.com/katedoolittle/docs/magazine_for_web_final" target="blank">See the whole magazine</a></p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
