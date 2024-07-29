@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sexy</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image off-the-clock">
+            </section>
+
+            <!-- main content -->
+            <section class="content">
+                <h1 class="light">Sexy</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../off-the-clock.html">OFF THE CLOCK</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">Sexy</p>
+                </div>
+                <div class="column-container">
+                    <div class="col1">
+                        <img class="image" src="../images/off-the-clock/sexy/Final1.webp" 
+                        alt="Wide view of a 3D modeled scene of a round, black leather bed floating in dark space. On the bed 
+                        are pillows and fuzzy blankets. Near the pillows is a pink Embryo chair, and it's facing a pole on the 
+                        other side of the bed. The scale is surreal as the bed and pillows are much larger than the chair and pole. 
+                        The scene is lit with pink and blue lighting.">
+                        <img class="image" src="../images/off-the-clock/sexy/Final10.webp" 
+                        alt="Close up of the chair from a low front-angle view with pillows in the background. On the bed next to the chair 
+                        is a vibrator. ">
+                        <img class="image" src="../images/off-the-clock/sexy/Final6.webp" 
+                        alt="Close up of the chair from a side angle. The chair has a curved back with two bulbous ends where the headrest 
+                        and seat are. It's held up with three chrome legs.">
+                        <img class="image" src="../images/off-the-clock/sexy/Final9.webp" 
+                        alt="Close up from behind the chair looking at the pole. The chrome of the pole and the chair legs are reflecting the pink 
+                        of the chair as well as the pink and blue lighting of the scene.">
+                    </div>
+                    <div class="col2">
+                        <p>
+                            For my first run at a 3D modeling program, my task was to recreate the Embryo Chair
+                            and model a scene around it. My entire concept hinges on the fact that this chair looks like a vibrator. 
+                            I was watching "How to Build a Sex Room" at the time and I'm sure that has nothing to do with it.
+                        </p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
