@@ -187,7 +187,7 @@ section {
 
 .calendar {
     display: none;
-    z-index: 2;
+    z-index: 4;
 }
 
 .calendar:hover {
@@ -281,6 +281,10 @@ footer {
     justify-content: space-between;
     align-items: center;
     border-top: 2px solid var(--purple);
+
+    p {
+        width: 100%;
+    }
 }
 
 .fixed {
@@ -795,11 +799,21 @@ p {
 
     .col1.home.open {
         display: block;
-        width: calc(100% - 2rem);
-        margin-inline: 1rem;
-        height: calc(100% - 4rem);
+        width: 100%;
+        margin: 0;
+        height: 100%;
         border-radius: 0 0 5px 5px;
         padding-bottom: 1rem;
+    }
+
+    #footer footer {
+        flex-direction: column;
+        
+        p {
+            text-align: center;
+            padding-bottom: 1rem;
+            width: 100%;
+        }      
     }
 }
 
@@ -819,16 +833,6 @@ p {
 
     .off-the-clock, .gigs, .about {
         background-position: center;
-    }
-
-    #footer footer {
-        flex-direction: column;
-        
-        p {
-            text-align: center;
-            padding-bottom: 1rem;
-            width: 100%;
-        }      
     }
 
     nav {
