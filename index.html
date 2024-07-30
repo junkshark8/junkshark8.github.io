@@ -28,6 +28,7 @@
                 var x = document.getElementById("calendar")
                 if (x.className === "col1 home") {
                     x.className += " open";
+                    document.getElementById("cal").style.setProperty('background-color', 'var(--pink)')
                     document.getElementById("cal").src="images/xmark.svg";
                     scrollTop =
                         window.pageYOffset ||
@@ -44,6 +45,7 @@
                 } else {
                     x.className = "col1 home";
                     document.getElementById("cal").src="images/calendar-alt-regular.svg";
+                    document.getElementById("cal").style.setProperty('background-color', 'var(--blue)')
                     window.onscroll = function () { };
                 }
             }

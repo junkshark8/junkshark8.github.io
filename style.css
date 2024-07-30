@@ -631,7 +631,8 @@ p {
 .col1.home {
     width: 25%;
     display: block;
-    background-color: var(--yellow);
+    background-color: var(--blue);
+    border: 2px solid var(--yellow);
     padding-inline: 1.5rem;
     padding-top: 1.5rem;
     padding-bottom: 5rem;
@@ -653,7 +654,7 @@ p {
     color: var(--dark);
     width: 100%;
     text-align: left;
-    background-color: var(--blue);
+    background-color: var(--yellow);
     border-radius: 5px;
     border: 2px solid var(--dark);
     padding: 0rem 1rem 1rem 1rem;
@@ -669,18 +670,23 @@ p {
     color: var(--dark)
 }
 
-.col1.home .event.hover {
-    border: 2px solid var(--pink);
+.col1.home .event.past.hover {
+    color: var(--yellow);
+    border-color: var(--yellow);
+    background-color: var(--purple);
+    text-decoration: underline solid var(--yellow);
+    text-decoration-thickness: 2px;
+    -webkit-text-decoration: underline solid var(--yellow);
+    -webkit-text-decoration-thickness: 2px;
 }
 
 .col1.home .event.hover:hover {
-    border: 2px dotted var(--dark);
+    border: 2px dotted var(--yellow);
     cursor: pointer;
-}
-
-.col1.home .event.past {
-    color: var(--dark);
-    background-color: var(--yellow);
+    text-decoration: underline dotted var(--yellow);
+    text-decoration-thickness: 2px;
+    -webkit-text-decoration: underline dotted var(--yellow);
+    -webkit-text-decoration-thickness: 2px;
 }
 
 .col1.home .org {
@@ -804,6 +810,7 @@ p {
         height: 100%;
         border-radius: 0 0 5px 5px;
         padding-bottom: 1rem;
+        border: none;
     }
 
     #footer footer {
