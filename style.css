@@ -785,8 +785,8 @@ p {
         border: 2px solid;
         border-color: var(--dark); 
         border-radius: 5px;
-        height: 3rem;
-        width: 48px;
+        height: 2rem;
+        width: 32px;
         padding: 0.25rem;
         position: fixed;
         bottom: 1rem;
