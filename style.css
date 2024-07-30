@@ -339,6 +339,13 @@ h1.light {
     background-color: var(--dark);
     margin-bottom: 1rem;
     border-radius: 0px 5px 5px 0px;
+    border: 2px solid var(--dark);
+    border-left: none;
+}
+
+h1.light.blue {
+    color: var(--dark);
+    background-color: var(--blue);
 }
 
 h2 {
@@ -876,7 +883,14 @@ p {
         display: none;
     }
 
+
     .light {
         max-width: 85%;
+    }
+
+    .double-image {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0;
     }
 }
