@@ -244,7 +244,7 @@ a.navlink {
     padding: 5px;
   }
 
-a.navlink:hover, a.navlink:focus {
+a.navlink:hover {
   border: 2px dotted;
   border-color: var(--dark);
 }
@@ -314,7 +314,7 @@ footer {
     padding: 0.25rem;
 }
 
-.contact a:hover, .contact a:focus {
+.contact a:hover {
     border-color: var(--dark);
     border-style: dotted;
 }
@@ -414,7 +414,7 @@ p {
     color: var(--dark);
 }
 
-.breadcrumb a:hover, .breadcrumb a:focus {
+.breadcrumb a:hover {
     text-decoration: underline dotted var(--dark);
     text-decoration-thickness: 2px;
     -webkit-text-decoration: underline dotted var(--dark);
@@ -466,7 +466,7 @@ p {
         border-radius: 0px 5px 5px 0px;
     }
 
-.lightbox:hover, .lightbox:focus {
+.lightbox:hover {
     .thumbnail {
         mix-blend-mode: luminosity;
         opacity: 80%;
@@ -585,7 +585,7 @@ p {
     color: var(--dark);
 }
 
-.col2 a:hover, .col2 a:focus {
+.col2 a:hover {
     text-decoration: underline dotted var(--dark);
     text-decoration-thickness: 2px;
     -webkit-text-decoration: underline dotted var(--dark);
