@@ -592,7 +592,7 @@ p {
     -webkit-text-decoration-thickness: 2px;
   }
 
-.col2 h2, .col2 h3, .col2 h4 {
+.col2 h2, .col2 h3 {
     text-align: left;
     width: 100%;
     padding-top: 0rem;
@@ -608,8 +608,9 @@ p {
     font-size: 1.25rem;
 }
 
-.col2 h4 {
+.type {
     font-size: 1rem;
+    font-weight: bold;
 }
 
 .col2 ul {
