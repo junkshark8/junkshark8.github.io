@@ -367,12 +367,15 @@ p {
 .breadcrumb {
     display: flex;
     justify-content: left;
-    background-color: var(--yellow);
     width: fit-content;
     margin: 0rem 0rem 1rem 1rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 5px;
     border: 2px solid var(--pink);
+}
+
+.breadcrumb {
+    background-color: var(--yellow);
 }
 
 .breadcrumb * {
@@ -473,8 +476,20 @@ p {
 .column-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    width: 100%;
+    grid-template-rows: 1fr
+}
+
+.masonry {
+    column-count: 2;
+    column-gap: 1rem;
+    padding-inline: 1rem;
+}
+
+.even-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    padding-inline: 1rem;
 }
 
 .about-image {

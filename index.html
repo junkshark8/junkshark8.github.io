@@ -23,6 +23,58 @@
                 }
             }
         </script>
+        <script>
+            function displayCalendar() {
+                // calendar, not the icon
+                var x = document.getElementById("calendar")
+                if (x.className === "col1 home") {
+                    // add open class
+                    x.className += " open";
+                    // set icon bg color to pink, change cal icon to xmark
+                    document.getElementById("cal").style.setProperty('background-color', 'var(--pink)')
+                    document.getElementById("cal-inner").src="images/xmark.svg";
+                    // get current scroll position
+                    scrollTop =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+                    scrollLeft =
+                        window.pageXOffset ||
+                        document.documentElement.scrollLeft,
+ 
+                    // if any scroll is attempted,
+                    // set this to the previous value
+                    window.onscroll = function () {
+                        window.scrollTo(scrollLeft, scrollTop);
+
+                    // disable background elements from screenreader
+                    document.getElementById("hero-text").style.display = 'none';
+                    document.getElementById("hero-subtitle").style.display = 'none';
+                    document.getElementById("off-the-clock").style.display = 'none';
+                    document.getElementById("gigs").style.display = 'none';
+                    document.getElementById("on-the-house").style.display = 'none';
+                    document.getElementById("about").style.display = 'none';
+                };
+                } else {
+                    // remove open class
+                    x.className = "col1 home";
+                    
+                    // revert cal icon
+                    document.getElementById("cal-inner").src="images/calendar-alt-regular.svg";
+                    document.getElementById("cal").style.setProperty('background-color', 'var(--blue)')
+                    
+                    // reenable scroll
+                    window.onscroll = function () { };
+
+                    // reenable background elements from screenreader
+                    document.getElementById("hero-text").style.display = 'block';
+                    document.getElementById("hero-subtitle").style.display = 'block';
+                    document.getElementById("off-the-clock").style.display = 'block';
+                    document.getElementById("gigs").style.display = 'block';
+                    document.getElementById("on-the-house").style.display = 'block';
+                    document.getElementById("about").style.display = 'block';
+                }
+            }
+        </script>
     </head>
     <body>
         <!-- nav bar -->
@@ -141,8 +193,15 @@
                                 <h2 class="title dark">OFF THE CLOCK</h2>
                             </div>
                         </a>
+
+                        <a id="on-the-house" href="on-the-house.html">
+                            <div class="lightbox single">
+                                <img class="thumbnail" alt="" src="images/thumbnails/on-the-house.webp"></img>
+                                <h2 class="title dark">ON THE HOUSE</h2>
+                            </div>
+                        </a>
     
-                        <a href="gigs.html">
+                        <a id="gigs" href="gigs.html">
                             <div class="lightbox single">
                                 <img class="thumbnail" alt="" src="images/thumbnails/gigs.webp"></img>
                                 <h2 class="title dark">GIGS</h2>

@@ -16,6 +16,7 @@ class Navbar extends HTMLElement {
               <li><a class="navlink home" href="/">HOME</a></li>
               <div>
                   <li><a class="navlink" href="//katedoolittle.com/off-the-clock.html">OFF THE CLOCK</a></li>
+                  <li><a class="navlink" href="//katedoolittle.com/on-the-house.html">ON THE HOUSE</a></li>
                   <li><a class="navlink" href="//katedoolittle.com/gigs.html">GIGS</a></li>
                   <li><a class="navlink" href="//katedoolittle.com/about.html">ABOUT</a></li>
               </div>

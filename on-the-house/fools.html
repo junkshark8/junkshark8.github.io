@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fools Magazine</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image gigs">
+            </section>
+
+            <!-- main content -->
+            <section class="content">
+                <h1 class="light">Fools Magazine</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../on-the-house.html">ON THE HOUSE</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">Fools Magazine</p>
+                </div>
+
+                <div class="column-container">
+                    <div class="col1">
+                        <img class="image" src="../images/gigs/fools-vol12/6.webp" 
+                        alt="The title for 'The Siblings as Psychics' set in a blocky, irregular typeface. Toward the end of the title the 
+                        letters start to fall apart, with transparent blue and red duplicates scattered behind them, cascading down the page 
+                        behind the body copy.">
+                        <img class="image" src="../images/gigs/fools-vol12/5.webp" 
+                        alt="Mockup of a three-page magazine spread called 'The Siblings as Psychics.' Pages two and three have facing 
+                        illustrations of a brother and sister. The brother, on the left, is made of black scribbles with a red core where 
+                        his heart would be. The vague form of his figure is sitting against a wall. The sister is also sitting against a wall, 
+                        but she is made of grey scribbles barely visible on the background. There are red and blue scribbles like veins throughout 
+                        her body. She's reaching out for something.">
+                        <img class="image" src="../images/gigs/fools-vol12/4.webp" 
+                        alt="The illustration from page 3. It's done in a painterly style with visible brush strokes and soft edges.">
+                        <img class="image" src="../images/gigs/fools-vol12/3.webp" 
+                        alt="Mockup of a three-page magazine spread called 'Worms.' The story is typeset on a teal background. 
+                        The first page has an illustration of a cat's tail swishing around the text. The second page has an illustration 
+                        of a bird's wing. The third page has a full page illustration of a cat sunbathing in a window alcove with a bird 
+                        flying outside the window. There's a small amount of text set in a teal box with faded edges over the middle of 
+                        the illustration.">
+                        <img class="image" src="../images/gigs/fools-vol12/1.webp" 
+                        alt="A black mug with a white graphic on it that says, 'Fools Vol. 12' in a distorted font. The Os in 'Fools' 
+                        are manipulated to look like watery eyes. The left is dripping up, the right is dripping down.">
+                        <img class="image" src="../images/gigs/fools-vol12/2.webp" 
+                        alt="Mockup of the Fools Vol. 12 graphic in black on a white t-shirt.">
+                    </div>
+                    <div class="col2">
+                        <p>Illustration, layout and merch design for volumes 11 and 12 of Fools Magazine. <a href="../off-the-clock/how-well-do-you-know-the-clitoris.html">HOW WELL DO YOU KNOW THE CLITORIS?</a>
+                        was published in vol. 11 and two self-portraits of mine were published in <a href="https://issuu.com/foolsmag/docs/fools_13_web">vol. 13</a>.</p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>

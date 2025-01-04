@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Daily Iowan</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image gigs">
+            </section>
+
+            <!-- main content -->
+            <section class="content">
+                <h1 class="light">The Daily Iowan</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../gigs.html">GIGS</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">The Daily Iowan</p>
+                </div>
+
+                <div class="column-container">
+                    <div class="col1">
+                        <img class="image" src="../images/gigs/the-di/1.webp" 
+                        alt="Front page of The Daily Iowan with a full-width above-the-fold graphic on COVID vaccine rollout. The graphic is seperated 
+                        from the story with a red background ending in a diagonal slash through the middle of the page. A grey circle and thick, curved red 
+                        line on the red background radiate out from a microscopic image of the COVID-19 virus. Another thick red line in the shape of a half circle 
+                        seperates the image of the virus from an image of a bottle of the Moderna COVID-19 vaccine. The image of the vaccine is shaped like a circle 
+                        with a point coming off the bottom right corner, embedding it into the story text. The secondary story below the fold has the 
+                        Ethics & Politics banner and an image of Joni Ernst on a computer screen during a zoom call. To the left of the secondary story 
+                        is a half-rail detailing some of the inside stories with the DITV logo. To the right of the secondary story is a third story about 
+                        vaccines and increasing travel interest."> 
+                        <img class="image" src="../images/gigs/the-di/3.webp" 
+                        alt="Front page of The Daily Iowan's Arts & Culture section, 80 Hours. A graphic takes up nearly the full page, 
+                        with the story starting below the graphic's torn bottom edge on the lower third of the page. The background is a dirt 
+                        road with a shadow of a figure cast in the upper left corner. Across the middle of the page is the silouhette of an ax, 
+                        in which an image of the Villisca Ax Murder House has been overlayed. The sign for the house is prominently displayed. 
+                        The title of the story and the '80 Hours' nameplate are set in a scratchy, pointy font."> 
+                        <img class="image" src="../images/gigs/the-di/2.webp" 
+                        alt="Front page of The Daily Iowan with a full-width above-the-fold photo of Andre Wright and Jason Sole. Both are wearing 
+                        white hoodies with black block text that reads, 'HUMANIZE MY HOODIE.' The photo background fades to white with Andre and 
+                        Jason standing on a pile of rubble, their heads slightly covering the 'Amplify' section nameplate at the top of the page. 
+                        The story title is below the photo, with the last word, 'Hoodie,' in green and all caps, overlapping the photo. The page includes 
+                        a secondary photo of Andre and Jason and a calendar of virtual community events on campus."> 
+                    </div>
+                    <div class="col2">
+                        <p>I started at <span style="font-style: italic;">The Daily Iowan</span> as a designer in 2019.</p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
