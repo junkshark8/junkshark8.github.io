@@ -364,6 +364,10 @@ p {
     width: 50%;
 }
 
+.date {
+    font-style: italic;
+}
+
 .breadcrumb {
     display: flex;
     justify-content: left;
