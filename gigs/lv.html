@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Little Village</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image gigs">
+            </section>
+
+            <!-- main content -->
+            <section class="content">
+                <h1 class="light">Little Village</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../gigs.html">GIGS</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">Little Village</p>
+                </div>
+
+                <div class="column-container">
+                    <div class="col1">
+                        <img class="image" src="../images/gigs/lv/LV-336-1.webp" 
+                        alt="Spread with color reader submitted photos of friends, family, architecture, and nature.">
+                        <img class="image" src="../images/gigs/lv/LV-336-2.webp" 
+                        alt="Spread with black and white reader submitted photos of friends, family, architecture, and nature.">
+                        <div class="double-image">
+                            <img class="image" src="../images/gigs/lv/LV-336-3.webp" 
+                            alt="Cover of Little Village 2025 reader submitted photo issue. The cover photo is 
+                            of a gravel road with greenery on either side and a line of telephone poles on the right. 
+                            The sky above it is teal with pinkish-orangeish clouds.">
+                            <img class="image" src="../images/gigs/lv/LV-335-5.webp" 
+                            alt="First page of the Peak Iowa issue, chronicalling the good, the weird, and the ugly of Iowa's history and culture. 
+                            The first story is 'The Outlaw Who (Almost) Got Credit as the First Cedar Rapidian' under the good category.">
+                        </div>
+                        <div class="double-image">
+                            <img class="image" src="../images/gigs/lv/LV-335-4.webp" 
+                            alt="A page from Peak Iowa where the story Kate wrote about the squirrel cage jail in Council Bluffs starts. The title is 'A Spinning 
+                            Panopticon of Misery' and the images are of the 2 foot by 2 foot solitary confinement cell inside the jail and a black and white photograph 
+                            of the outside of the jail.">  
+                            <img class="image" src="../images/gigs/lv/LV-335-3.webp" 
+                            alt="A page from Peak Iowa where the squirrel cage jail story continues with a sidebar about the Farmers' Holiday strike. The image on this page 
+                            is a large picture of the metal cage surrounding the cell block with a prop arm sticking through the bars.">
+                        </div>
+                        <img class="image" src="../images/gigs/lv/LV-334-2.webp" 
+                        alt="First spread from the 2024 give guide inspired by the choose your own adventure books. On the right page is a black and white 
+                        linocut-style illustration featuring a collage of images that reference the categories in the give guide: healthcare, education, housing, etc.">  
+                        <div class="double-image">
+                            <img class="image" src="../images/gigs/lv/LV-334-1.webp" 
+                            alt="Prairie Pop story called 'The Sound Company,' the title of which is a scan of The Sound Company's logo from 
+                            an ad. Above and below is a bisected image of a homemade mixtape and track list called 'Psycho Sessions V'.">
+                            <img class="image" src="../images/gigs/lv/LV-335-2.webp" 
+                            alt="Spread for a story titled 'The Avatar' about Innocent Display, a magazine about graffiti in Iowa.">
+                        </div>
+                        <img class="image" src="../images/gigs/lv/LV-335-1.webp" 
+                        alt="Second spread for 'The Avatar' featuring photos of graffiti and graffiti writers from Innocent Display.">
+                        <img class="image" src="../images/gigs/lv/LV-332-4.webp" 
+                        alt="Spread for the story 'Hollars & Dollars' about a Bawdy Bawdy Ha Ha burlesque performance. A photo of a performer making a sweeping 
+                        motion with red irridescent fabric resembling wings spreads across the middle of the page.">  
+                        <div class="double-image">
+                            <img class="image" src="../images/gigs/lv/bb1.webp" 
+                            alt="Page in the 2024 Bread & Butter about Des Moines area eateries. There's an illustrated map by Kate on the right.">
+                            <img class="image" src="../images/gigs/lv/bb2.webp" 
+                            alt="Page in the 2024 Bread & Butter about Iowa City area eateries. There's an illustrated map by Kate on the right.">
+                        </div>
+                    </div>
+                    <div class="col2">
+                       <p>After graduating in May 2024 I sent a portfolio and a resume to Little Village, and a couple of months after that I got my first 
+                        (and only) freelance assignment. With some luck and a good word from a former teacher of mine, I landed a part-time graphic design job 
+                        that turned full-time a few months later.</p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>

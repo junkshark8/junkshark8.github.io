@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Daily Iowan</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <navbar-component></navbar-component>
+        
+        <div id="wrapper">
+            <section class="hero-image gigs">
+            </section>
+
+            <!-- main content -->
+            <section class="content">
+                <h1 class="light">The Daily Iowan</h1>
+                <div class="breadcrumb">
+                    <p class="home-page"><a href="../index.html">HOME</a></p>
+                    <p class="slash">/</p>
+                    <p class="previous-page"><a href="../gigs.html">GIGS</a></p>
+                    <p class="slash">/</p>
+                    <p class="current-page">The Daily Iowan</p>
+                </div>
+
+                <div class="column-container">
+                    <div class="col1">
+                        <div class="double-image">
+                            <img class="image" src="../images/gigs/the-di/2.webp" 
+                            alt="Front page of The Daily Iowan with a full-width above-the-fold photo of Andre Wright and Jason Sole. Both are wearing 
+                            white hoodies with black block text that reads, 'HUMANIZE MY HOODIE.' The photo background fades to white with Andre and 
+                            Jason standing on a pile of rubble, their heads slightly covering the 'Amplify' section nameplate at the top of the page. 
+                            The story title is below the photo, with the last word, 'Hoodie,' in green and all caps, overlapping the photo. The page includes 
+                            a secondary photo of Andre and Jason and a calendar of virtual community events on campus."> 
+                            <img class="image" src="../images/gigs/the-di/3.webp" 
+                            alt="Front page of The Daily Iowan's Arts & Culture section, 80 Hours. A graphic takes up nearly the full page, 
+                            with the story starting below the graphic's torn bottom edge on the lower third of the page. The background is a dirt 
+                            road with a shadow of a figure cast in the upper left corner. Across the middle of the page is the silouhette of an ax, 
+                            in which an image of the Villisca Ax Murder House has been overlayed. The sign for the house is prominently displayed. 
+                            The title of the story and the '80 Hours' nameplate are set in a scratchy, pointy font."> 
+                        </div>
+                        <div class="double-image">
+                            <img class="image" src="../images/gigs/the-di/1.webp" 
+                            alt="Front page of The Daily Iowan with a full-width above-the-fold graphic on COVID vaccine rollout. The graphic is seperated 
+                            from the story with a red background ending in a diagonal slash through the middle of the page. A grey circle and thick, curved red 
+                            line on the red background radiate out from a microscopic image of the COVID-19 virus. Another thick red line in the shape of a half circle 
+                            seperates the image of the virus from an image of a bottle of the Moderna COVID-19 vaccine. The image of the vaccine is shaped like a circle 
+                            with a point coming off the bottom right corner, embedding it into the story text. The secondary story below the fold has the 
+                            Ethics & Politics banner and an image of Joni Ernst on a computer screen during a zoom call. To the left of the secondary story 
+                            is a half-rail detailing some of the inside stories with the DITV logo. To the right of the secondary story is a third story about 
+                            vaccines and increasing travel interest."> 
+                            <img class="image" src="../images/gigs/the-di/4.webp" 
+                            alt="Front page of The Daily Iowan's Arts & Culture section, 80 Hours. A graphic takes up nearly the full page. The background is 
+                            a purple brick wall with pink grungy textures and neon text showing the 80 Hours header and the title of the story, 'A Revival on Wheels.' The subtitle is 'Roller Skating'.
+                            In the foreground are two isolated skaters lit in pinkish-purplish light."> 
+                        </div>
+                        <div class="double-image">
+                            <img class="image" src="../images/gigs/the-di/9.webp" 
+                            alt="Graphic of a person with glasses and light brown hair in a yellow shirt sitting with their hand under their chin and a concerned expression. 
+                            On the left side, there's a chalk board behind them, and on the right side there's a computer screen in front of them."> 
+                            <img class="image" src="../images/gigs/the-di/10.webp" 
+                            alt="Graphic of a wallet with a credit and debit card in the card slots and bills sticking out vertically like a bar graph. The bills indicate Johnson County Recommended
+                            wages from 2015 to March of 2021. They start at $8.20 and increase to $10.75"> 
+                        </div>
+                        <div class="double-image">
+                            <img class="image" src="../images/gigs/the-di/5.webp" 
+                            alt="Front page of The Daily Iowan's Arts & Culture section, 80 Hours. It's a full page graphic made to look like the packaging of Ben & Jerry's 
+                            ice cream, with a blue sky, white fluffy clouds, and rolling green hills. In the foreground is a three-scoop neopolitan cone with blue headphones 
+                            on the chocolate scoop. The headline of the story in a similar font to Ben & Jerry's and reads 'not your average scoop' with the first e in 'average' 
+                            facing backwards."> 
+                            <img class="image" src="../images/gigs/the-di/6.webp" 
+                            alt="Front page of The Daily Iowan with an above-the-fold graphic for a story titled 'Celebrating Black history.' The graphic is a digital collage 
+                            of Duke Slater, Carl Cain, Phillip Hubbard, and Elizabeth Catlett. Behind them are strips of paper in green, red, and yellow with bits of kente cloth. The graphic 
+                            appears to be taped down to the front page with yellow tape. The rail on the left has teases for the inside stories. The secondary story is about Iowa reacting to 
+                            immigration reform, and the third story is about a spike in cancelled housing contracts."> 
+                        </div>
+                        <div class="double-image">
+                            <img class="image" src="../images/gigs/the-di/7.webp" 
+                            alt="Front page of The Daily Iowan's sports section with a full-width above-the-fold graphic about the University's only national championship gymnastics 
+                            team from 1969. The title is 'Lone Champions' with yellow arrows framing it on the left. The main graphic is a collage of images inlaid with yellow arrows pointing 
+                            to the right. Below the fold is the rail with sports updates, the secondary story about tennis, and the third story which is a debate about the football draft."> 
+                            <img class="image" src="../images/gigs/the-di/8.webp" 
+                            alt="Front page of The Daily Iowan's Arts & Culture section, 80 Hours. The story is titled, 'From the page to the screen' in a fancy blackletter font. The graphic is an 
+                            open book with a chess board on the pages. The bottom row of the board on the right page turns into a strip of film and loops off the page where it connects to a film reel. 
+                            Chess pieces are also falling off the pages. The story begins about two thirds of the way down the page and is bordered by the loopy film tape."> 
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <p>I started at <span style="font-style: italic;">The Daily Iowan</span> as a Designer in 2019. After a year I took over as Design Editor. 
+                        The paper was named the Great Plains Journalism Awards Student Newspaper of the Year in 2020, and the Iowa Newspaper Association 
+                        Newspaper of the Year two years running. I was the Great Plains Journalism Awards Student Designer of the Year in 2021 and 2022.</p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </body>
+</html>
