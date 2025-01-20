@@ -7,6 +7,11 @@
     word-break: break-word;
   }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -180,6 +185,16 @@ section {
     height: 100%;
 }
 
+.calendar {
+    display: none;
+    z-index: 4;
+}
+
+.calendar:hover {
+    border: 2px dotted;
+    cursor: pointer;
+}
+
 nav {
   display: flex;
   position: fixed;
@@ -188,7 +203,7 @@ nav {
   width: 100%;
   height: fit-content;
   padding: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 ul {
@@ -229,7 +244,7 @@ a.navlink {
     padding: 5px;
   }
 
-a.navlink:hover, a.navlink:focus {
+a.navlink:hover {
   border: 2px dotted;
   border-color: var(--dark);
 }
@@ -260,12 +275,16 @@ footer {
     font-size: 14px;
     display: flex;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     bottom: 0;
     justify-content: space-between;
     align-items: center;
     border-top: 2px solid var(--purple);
+
+    p {
+        width: 100%;
+    }
 }
 
 .fixed {
@@ -291,15 +310,11 @@ footer {
     border: 2px solid;
     border-color: var(--pink); 
     border-radius: 5px;
-    text-decoration: none;
-    color: var(--dark);
-    font-size: 1.5rem;
-    font-weight: 300;
     height: 2rem;
     padding: 0.25rem;
 }
 
-.contact a:hover, .contact a:focus {
+.contact a:hover {
     border-color: var(--dark);
     border-style: dotted;
 }
@@ -328,6 +343,13 @@ h1.light {
     background-color: var(--dark);
     margin-bottom: 1rem;
     border-radius: 0px 5px 5px 0px;
+    border: 2px solid var(--dark);
+    border-left: none;
+}
+
+h1.light.blue {
+    color: var(--dark);
+    background-color: var(--blue);
 }
 
 h2 {
@@ -399,7 +421,7 @@ p {
     color: var(--dark);
 }
 
-.breadcrumb a:hover, .breadcrumb a:focus {
+.breadcrumb a:hover {
     text-decoration: underline dotted var(--dark);
     text-decoration-thickness: 2px;
     -webkit-text-decoration: underline dotted var(--dark);
@@ -451,7 +473,7 @@ p {
         border-radius: 0px 5px 5px 0px;
     }
 
-.lightbox:hover, .lightbox:focus {
+.lightbox:hover {
     .thumbnail {
         mix-blend-mode: luminosity;
         opacity: 80%;
@@ -582,14 +604,14 @@ p {
     color: var(--dark);
 }
 
-.col2 a:hover, .col2 a:focus {
+.col2 a:hover {
     text-decoration: underline dotted var(--dark);
     text-decoration-thickness: 2px;
     -webkit-text-decoration: underline dotted var(--dark);
     -webkit-text-decoration-thickness: 2px;
   }
 
-.col2 h2, .col2 h3, .col2 h4 {
+.col2 h2, .col2 h3 {
     text-align: left;
     width: 100%;
     padding-top: 0rem;
@@ -605,8 +627,9 @@ p {
     font-size: 1.25rem;
 }
 
-.col2 h4 {
+.type {
     font-size: 1rem;
+    font-weight: bold;
 }
 
 .col2 ul {
@@ -628,7 +651,8 @@ p {
 .col1.home {
     width: 25%;
     display: block;
-    background-color: var(--yellow);
+    background-color: var(--blue);
+    border: 2px solid var(--yellow);
     padding-inline: 1.5rem;
     padding-top: 1.5rem;
     padding-bottom: 5rem;
@@ -638,7 +662,7 @@ p {
     overflow: scroll;
     scrollbar-color: var(--purple) var(--yellow);
     scrollbar-width: thin;
-    z-index: 1;
+    z-index: 2;
     border-radius: 0px;
 }
 
@@ -650,7 +674,7 @@ p {
     color: var(--dark);
     width: 100%;
     text-align: left;
-    background-color: var(--blue);
+    background-color: var(--yellow);
     border-radius: 5px;
     border: 2px solid var(--dark);
     padding: 0rem 1rem 1rem 1rem;
@@ -666,18 +690,23 @@ p {
     color: var(--dark)
 }
 
-.col1.home .event.hover {
-    border: 2px solid var(--pink);
+.col1.home .event.past.hover {
+    color: var(--yellow);
+    border-color: var(--yellow);
+    background-color: var(--purple);
+    text-decoration: underline solid var(--yellow);
+    text-decoration-thickness: 2px;
+    -webkit-text-decoration: underline solid var(--yellow);
+    -webkit-text-decoration-thickness: 2px;
 }
 
 .col1.home .event.hover:hover {
-    border: 2px dotted var(--dark);
+    border: 2px dotted var(--yellow);
     cursor: pointer;
-}
-
-.col1.home .event.past {
-    color: var(--dark);
-    background-color: var(--yellow);
+    text-decoration: underline dotted var(--yellow);
+    text-decoration-thickness: 2px;
+    -webkit-text-decoration: underline dotted var(--yellow);
+    -webkit-text-decoration-thickness: 2px;
 }
 
 .col1.home .org {
@@ -737,7 +766,7 @@ p {
 
     .col1 {
         margin-inline: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
     }
 
     .no-pad {
@@ -751,6 +780,7 @@ p {
     .about-image {
         height: auto;
         width: 100%;
+        margin-bottom: 1;
     }
 
     .col1.home {
@@ -777,6 +807,41 @@ p {
     .subtitle {
         text-align: center;
     }
+
+    .calendar {
+        display: flex;
+        background-color:var(--blue);
+        align-items: center;
+        border: 2px solid;
+        border-color: var(--dark); 
+        border-radius: 5px;
+        height: 2rem;
+        width: 32px;
+        padding: 0.25rem;
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .col1.home.open {
+        display: block;
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        border-radius: 0 0 5px 5px;
+        padding-bottom: 9rem;
+        border: none;
+    }
+
+    #footer footer {
+        flex-direction: column;
+        
+        p {
+            text-align: center;
+            padding-bottom: 1rem;
+            width: 100%;
+        }      
+    }
 }
 
 @media (max-width: 660px) {
@@ -795,16 +860,6 @@ p {
 
     .off-the-clock, .gigs, .about {
         background-position: center;
-    }
-
-    #footer footer {
-        flex-direction: column;
-        
-        p {
-            text-align: center;
-            padding-bottom: 1rem;
-            width: 100%;
-        }      
     }
 
     nav {
@@ -859,7 +914,14 @@ p {
         display: none;
     }
 
+
     .light {
         max-width: 85%;
+    }
+
+    .double-image {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0;
     }
 }
