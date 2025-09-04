@@ -13,7 +13,7 @@ class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <footer>
-            <p>© ` + copyrightYear + ` Kate Doolittle. Hand coded by me, Kate Doolittle :P</p>
+            <p>© ` + copyrightYear + ` Kellan (k8) Doolittle. Hand coded by me, k8 :P</p>
             <div class='contact'>
                 <a href='https://www.instagram.com/kdoolittleart/' target='blank'>
                     <img alt="instagram" class="fa-icon grow" src="images/instagram.svg"></img>
