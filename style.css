@@ -5,6 +5,7 @@
 * {
     box-sizing: border-box;
     word-break: break-word;
+    text-wrap: balance;
   }
 
 .stop-scrolling {
@@ -16,10 +17,17 @@ html, body {
     padding: 0;
     margin: 0;
     height: 100%;
+    min-height: 100%;
     color: var(--dark);
+    background-color: var(--yellow);
     font-family: Futura, sans-serif;
     scrollbar-color: var(--purple) transparent;
     scrollbar-width: thin;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -27,9 +35,8 @@ a {
 }
 
 #wrapper { 
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    position: relative;
+    min-height: 100vh;
 }
 
 section {
@@ -38,15 +45,61 @@ section {
     width: 100%;
 }
 
-.hero-image {
-    min-height: 100%;
+.banner-image {
+    min-height: 35%;
+    max-height: 35%;
     position:fixed;
     top: 0;
+    background: url(images/banner-image.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+.hero-image {
+    min-height: 65%;
+    position:fixed;
+    top: 35%;
     background: url(images/hero-image.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
+}
+
+.hero-text {
+    display: flex;
+    width: fit-content;
+    text-align: left;
+    align-items: baseline;
+    padding: .5rem 1rem;
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--dark);
+    color: var(--yellow);
+    position: sticky;
+    top: 35%;
+    z-index: 1;
+    -ms-transform: translate(0, -21.5%);
+    -webkit-transform: translate(0, -21.5%);
+    -moz-transform: translate(0, -21.5%);
+    -o-transform: translate(0, -21.5%);
+    transform: translate(0, -21.5%);
+
+    h1 {
+        padding: 0 1rem 0 0;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+        text-wrap: nowrap;
+    }
+}
+
+.hero-text .subtitle {
+    padding: 0 0 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+    width: 100%;
 }
 
 .off-the-clock {
@@ -96,41 +149,6 @@ section {
     z-index: 0;
 }
 
-.hero-text {
-    display: block;
-    width: 75%;
-    text-align: left;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 30%;
-    padding-right: 1.25rem;
-    border-radius: 0px 5px 5px 0px;
-    background-color: var(--dark);
-    color: var(--yellow);
-    position: sticky;
-    top: 21.5%;
-    z-index: 1;
-    -ms-transform: translate(0, -21.5%);
-    -webkit-transform: translate(0, -21.5%);
-    -moz-transform: translate(0, -21.5%);
-    -o-transform: translate(0, -21.5%);
-    transform: translate(0, -21.5%);
-
-    h1 {
-        padding: 0;
-        margin: 0;
-        font-size: 3rem;
-        font-weight: 600;
-    }
-}
-
-.hero-text .subtitle {
-    padding: 0 0 0.25rem 0;
-    font-size: 1.25rem;
-    font-weight: 300;
-    width: 100%;
-}
-
 .fit {
     padding: 1rem 1.5rem 1rem 1.5rem;
     width: fit-content;
@@ -144,17 +162,16 @@ section {
 }
 
 .content {
+    flex: 1;
     width: 100%;
-    margin-top: 12vh;
-    padding-bottom: 5vh;
+    position: absolute;
+    top: 35%;
+    height: 65%;
+    max-height: 65%;
 }
 
 .content h2 {
     font-size: 1.5rem;
-}
-
-.push {
-    margin-top: 85vh;
 }
 
 .topnav {
@@ -164,7 +181,7 @@ section {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid var(--purple);
-    border-radius: 0px 0px 5px 5px;
+    border-top: 2px solid var(--purple);
   }
 
 .topnav ul {
@@ -198,7 +215,7 @@ section {
 nav {
   display: flex;
   position: fixed;
-  top: 0;
+  top: 35%;
   justify-content: flex-end;
   width: 100%;
   height: fit-content;
@@ -208,7 +225,7 @@ nav {
 
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 1rem;
   display: flex;
   width: 100%;
   align-items: center;
@@ -220,8 +237,6 @@ li {
     text-align: right;
     width: min-content;
     white-space: nowrap;
-    padding-block: 1rem;
-    padding-inline: 1.5rem;
   }
 
 ol {
@@ -253,6 +268,7 @@ a.navlink.home {
     text-align: left;
     width: 100%;
     font-weight: 600;
+    text-wrap: nowrap;
   }
 
 a.navlink.active {
@@ -269,15 +285,15 @@ a.navlink.active {
 /* footer */
 footer {
     width: 100%;
-    padding: 1rem 1.5rem;
+    padding: .5rem 1rem;
     background-color: var(--yellow);
     color: var(--dark);
     font-size: 14px;
     display: flex;
-    position: relative;
-    z-index: 3;
-    left: 0;
+    position: fixed;
+    z-index: 6;
     bottom: 0;
+    left: 0;
     justify-content: space-between;
     align-items: center;
     border-top: 2px solid var(--purple);
@@ -357,7 +373,7 @@ h2 {
     margin: 0;
     width: 100%;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -366,7 +382,7 @@ h3 {
     margin: 0;
     width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -458,7 +474,7 @@ p {
         border-radius: 3px;
     }
     .title.dark {
-        padding: 1rem 1.5rem 1rem 1.5rem;
+        padding: .5rem 1rem .5rem 1rem;
         width: fit-content;
         max-width: 90%;
         position: absolute;
@@ -496,7 +512,7 @@ p {
 .home-container {
     display: flex;
     height: 100%;
-    margin-bottom: 0;
+    margin-top: 4.5rem;
 }
 
 .column-container {
@@ -627,11 +643,6 @@ p {
     font-size: 1.25rem;
 }
 
-.type {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
 .col2 ul {
     list-style: none;
     display: block;
@@ -653,12 +664,12 @@ p {
     display: block;
     background-color: var(--blue);
     border: 2px solid var(--yellow);
-    padding-inline: 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 5rem;
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
     position: fixed;
-    top: 0;
-    height: 100vh;
+    top: 35%;
+    height: 65vh;
     overflow: scroll;
     scrollbar-color: var(--purple) var(--yellow);
     scrollbar-width: thin;
@@ -716,7 +727,7 @@ p {
 .col1.home  h2 {
     width: 100%;
     text-align: left;
-    padding-block: 2rem 1rem;
+    padding-block: 1rem;
 }
 
 .col1.home h3 {
@@ -741,14 +752,25 @@ p {
     padding-block: 0.25rem;
 }
 
-.col2.home {
+.lightbox-container.home {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-content:start;
+    align-items:center;
+    gap: 1rem;
     width: 75%;
     margin-left: 25%;
     margin-right: 0;
+    padding-left: 1rem;
     padding-right: 0;
-    padding-bottom: 0;
+    padding-bottom: 5rem;
     background-color: transparent;
     border: none;
+    a {
+        flex: 0 0 calc(50% - 1.5rem);
+        align-self: center;
+    }
 }
 
 /* media tags for responsiveness */
@@ -791,17 +813,6 @@ p {
         width: 100%;
         margin: 0;
         padding-left: 0;
-    }
-
-    .hero-text {
-        padding-left: 1.25rem;
-        width: 100%;
-        text-align: center;
-        border-radius: 0;
-
-        h1 {
-            font-size: 2rem;
-        }
     }
 
     .subtitle {

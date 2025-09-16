@@ -13,11 +13,13 @@ class Navbar extends HTMLElement {
     <nav id="navbar">
       <div class="topnav" id="topnav">
           <ul id="nav-container">
-              <li><a class="navlink home" href="/">HOME</a></li>
+              <li><a class="navlink home" href="/">home</a></li>
               <div>
-                  <li><a class="navlink" href="//katedoolittle.com/off-the-clock.html">OFF THE CLOCK</a></li>
-                  <li><a class="navlink" href="//katedoolittle.com/gigs.html">GIGS</a></li>
-                  <li><a class="navlink" href="//katedoolittle.com/about.html">ABOUT</a></li>
+                  <li><a class="navlink" href="//katedoolittle.com/off-the-clock.html">publications</a></li>
+                  <li><a class="navlink" href="//katedoolittle.com/gigs.html">intermedia</a></li>
+                  <li><a class="navlink" href="//katedoolittle.com/gigs.html">branding</a></li>
+                  <li><a class="navlink" href="//katedoolittle.com/gigs.html">other stuff</a></li>
+                  <li><a class="navlink" href="//katedoolittle.com/about.html">about</a></li>
               </div>
           </ul>
           <!-- hamburger icon for small screens -->
