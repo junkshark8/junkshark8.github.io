@@ -23,60 +23,65 @@
                 }
             }
         </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                function variableContentMargin() {
+                var banner = document.getElementById("banner");
+                var content = document.getElementById("content");
+                var contentMargin = banner.offsetHeight + 56
+                console.log(contentMargin);
+                content.style.marginTop = `${contentMargin}px`;
+            }
+            variableContentMargin();
+            });
+        </script>
+
     </head>
     <body>
-        <!-- nav bar -->
-        <navbar-component></navbar-component>
-        
         <div id="wrapper">
+            <section id="banner" class="banner-image">
+                <div class="hero-text">
+                    <h1 id="hero-text">k8</h1>
+                    <p id="hero-subtitle" class="subtitle">artist & graphic designer</p>
+                </div>
+            </section>
+
+            <!-- nav bar -->
+            <navbar-component class="nav-home"></navbar-component>
+
             <section class="hero-image about">
             </section>
 
             <!-- main content -->
-            <section id="about" class="content">
-                <h1 class="light">ABOUT</h1>
-
-                <div class="breadcrumb">
-                    <p class="home-page"><a href="index.html">HOME</a></p>
-                    <p class="slash">/</p>
-                    <p class="current-page">ABOUT</p>
-                </div>
-                
-                <div class="column-container">
-                    <div class="col1">
-                        <img class="image about-image" src="images/about.webp" alt="Kate is wearing a mascara mustache and making 
-                        a kissy face at the camera. He's squishing his upper lip together with his fingers.">
-                    </div>
-                    <div class="col2">
-                        <div>
-                            <p>
-                                Write some stuff here that's like, witty and fun in just the right way
-                                but not too vulnerable (gross.) Don't reveal too much about yourself,
-                                but make yourself sound interesting.
-                            </p><br>
-                            <p>
-                                Strike a perfect balance between being honest and mysterious. 
-                                Explain your art just enough to give people context but 
-                                not so much that you sound pretentious. Something like, "I make art 
-                                about the things that interest me, like gender and garbage and sharks." (perfect!) 
-                            </p><br>
-                            <p>
-                                Make sure people know that you do other things too, like take walks in the sunshine
-                                and watch live music and pet your three cats. Be honest about your hobbies but pick
-                                the ones that are relatable.
-                            </p><br>
-                            <p>
-                                Explain that you do have a day job, because art doesn't pay the bills, and that you
-                                expertly walk the tight-rope between being anti-establishment and being able to afford rent. 
-                                Make sure employers know this won't affect your performance. 
-                            </p><br>
-                                Sign off with something short and sweet that perfectly encapsulates your essence. 
-                                (Nailed it.)
-                            </p>
-                        </div>
-                        <br>
-                        <p class="blurb" style="font-style: italic;">Like what you see? <a href="mailto:kdoolittleart@gmail.com">Commission me!</a> Free for a good cause.</p>
-                    </div>
+            <section id="content" class="content">
+                <h2 class="light">about</h2>
+                <div class="content-container">
+                    <img class="image about-image" src="images/about.webp" alt="Kate is wearing a mascara mustache and making 
+                    a kissy face at the camera. He's squishing his upper lip together with his fingers.">
+                        <p>
+                            Write some stuff here that's like, witty and fun in just the right way
+                            but not too vulnerable (gross.) Don't reveal too much about yourself,
+                            but make yourself sound interesting.
+                            <br><br>
+                            Strike a perfect balance between being honest and mysterious. 
+                            Explain your art just enough to give people context but 
+                            not so much that you sound pretentious. Something like, "I make art 
+                            about the things that interest me, like gender and garbage and sharks." (perfect!) 
+                            <br><br>
+                            Make sure people know that you do other things too, like take walks in the sunshine
+                            and watch live music and pet your three cats. Be honest about your hobbies but pick
+                            the ones that are relatable.
+                            <br><br>
+                            Explain that you do have a day job, because art doesn't pay the bills, and that you
+                            expertly walk the tight-rope between being anti-establishment and being able to afford rent. 
+                            Make sure employers know this won't affect your performance. 
+                            <br><br>
+                            Sign off with something short and sweet that perfectly encapsulates your essence. 
+                            (Nailed it.)
+                            <br><br>
+                            <span class="blurb">Like what you see? <a href="mailto:kdoolittleart@gmail.com">Commission me!</a> Free for a good cause.</span>
+                        </p>
                 </div>
             </section> 
     

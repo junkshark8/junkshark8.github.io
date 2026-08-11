@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Duct Tape</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                function variableContentMargin() {
+                var banner = document.getElementById("banner");
+                var content = document.getElementById("content");
+                var contentMargin = banner.offsetHeight + 56
+                console.log(contentMargin);
+                content.style.marginTop = `${contentMargin}px`;
+            }
+            variableContentMargin();
+            });
+        </script>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <section id="banner" class="banner-image">
+                <div class="hero-text">
+                    <h1 id="hero-text">k8</h1>
+                    <p id="hero-subtitle" class="subtitle">artist & graphic designer</p>
+                </div>
+            </section>
+
+            <!-- nav bar -->
+            <navbar-component class="nav-home"></navbar-component>
+
+            <section class="hero-image off-the-clock">
+            </section>
+
+            <!-- main content -->
+            <section id="content" class="content">
+                <h2 class="light">Duct Tape</h2>
+                <div class="content-container">
+                        <img class="image" src="../images/play/duct-tape/zines.webp" 
+                        alt="A folded zine sitting on a stack of other folded zines with another stack fanned out to the side.">
+                        <p>
+                            When I was young I made stuff out of duct tape. Roses, wallets, even a pair of flip flops.
+                        </p>
+                        <img class="image" src="../images/play/duct-tape/2.webp" 
+                        alt="Zine spread with text made from a combination of cutout magazine letters, sparkly letter stickers, 
+                        and sharpie. There are a few colorful circular price tag stickers on the pages. The left page is made of 
+                        orange duct tape and the right page is made of yellow.">
+                        <p>
+                            I made my dad take me to home depot so I could pick out fun colors. There's something poetic about the union of art & utility.
+                        </p>
+                        <img class="image" src="../images/play/duct-tape/3.webp"
+                        alt="Zine spread with text made from a combination of cutout magazine letters, sparkly letter stickers, 
+                        and sharpie. There are a few colorful circular price tag stickers on the pages. The pages are made of 
+                        yellow duct tape.">
+                        <p>
+                            Something sinister about fashioning flowers from plastic & rubber glue.
+                        </p>
+                        <img class="image" src="../images/play/duct-tape/4.webp" 
+                        alt="Zine spread with text made from a combination of cutout magazine letters, sparkly letter stickers, 
+                        and sharpie. There are a few colorful circular price tag stickers on the pages. The left page is made of 
+                        yellow duct tape and the right page is made of orange.">
+                        <img class="image" src="../images/play/duct-tape/1.webp" 
+                        alt="Front and back cover of the zine. It's made of orange duct tape. The text is cutout letters from 
+                        magazines and it's covered in colorful circular price tag stickers. The back is signed Junk!">
+                        <p class="blurb"><a href="../zines/duct-tape.zip" download>Download a printable copy of the zine</a>
+                            <br><br>
+                        <span class="date">February 2023</span></p>
+                </div>
+            </section> 
+
+            <!-- footer -->
+            <section id="footer">
+                <footer-component></footer-component>
+            </section>
+        </div>
+    </body>
+</html>

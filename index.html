@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>K8</title>
+        <title>k8</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link href="style.css" rel="stylesheet">
         <meta charset="UTF-8">
@@ -27,207 +27,136 @@
                 }
             }
         </script>
+
         <script>
-            function displayCalendar() {
-                // calendar, not the icon
-                var x = document.getElementById("calendar")
-                if (x.className === "col1 home") {
-                    // add open class
-                    x.className += " open";
-                    // set icon bg color to pink, change cal icon to xmark
-                    document.getElementById("cal").style.setProperty('background-color', 'var(--pink)')
-                    document.getElementById("cal-inner").src="images/xmark.svg";
-                    // get current scroll position
-                    scrollTop =
-                        window.pageYOffset ||
-                        document.documentElement.scrollTop;
-                    scrollLeft =
-                        window.pageXOffset ||
-                        document.documentElement.scrollLeft,
- 
-                    // if any scroll is attempted,
-                    // set this to the previous value
-                    window.onscroll = function () {
-                        window.scrollTo(scrollLeft, scrollTop);
-
-                    // disable background elements from screenreader
-                    document.getElementById("hero-text").style.display = 'none';
-                    document.getElementById("hero-subtitle").style.display = 'none';
-                    document.getElementById("off-the-clock").style.display = 'none';
-                    document.getElementById("gigs").style.display = 'none';
-                    document.getElementById("about").style.display = 'none';
-                };
-                } else {
-                    // remove open class
-                    x.className = "col1 home";
-                    
-                    // revert cal icon
-                    document.getElementById("cal-inner").src="images/calendar-alt-regular.svg";
-                    document.getElementById("cal").style.setProperty('background-color', 'var(--blue)')
-                    
-                    // reenable scroll
-                    window.onscroll = function () { };
-
-                    // reenable background elements from screenreader
-                    document.getElementById("hero-text").style.display = 'block';
-                    document.getElementById("hero-subtitle").style.display = 'block';
-                    document.getElementById("off-the-clock").style.display = 'block';
-                    document.getElementById("gigs").style.display = 'block';
-                    document.getElementById("about").style.display = 'block';
-                }
+            document.addEventListener("DOMContentLoaded", () => {
+                function variableContentMargin() {
+                var banner = document.getElementById("banner");
+                var content = document.getElementById("content");
+                var contentMargin = banner.offsetHeight + 56
+                console.log(contentMargin);
+                content.style.marginTop = `${contentMargin}px`;
             }
+            variableContentMargin();
+            });
         </script>
+ 
     </head>
     <body id="body">
-        <!-- nav bar -->
-        <navbar-component></navbar-component>
-       
-        <div id="wrapper">
-            <div class="hero-text">
-                <h1 id="hero-text">K8</h1>
-                <p id="hero-subtitle" class="subtitle">Artist & Graphic Designer</p>
-            </div>
+        <div class="wrapper" id="wrapper">
+            <section id="banner" class="banner-image">
+                <div class="hero-text">
+                    <h1 id="hero-text">k8</h1>
+                    <p id="hero-subtitle" class="subtitle">artist & graphic designer</p>
+                </div>
+            </section>
+
+            <!-- nav bar -->
+            <navbar-component class="nav-home"></navbar-component>
+
             <section class="hero-image">
             </section>
-
             <!-- main content -->
-             <!-- calendar -->
-            <section>
-            <a id="cal" href="javascript:void(0);" class="icon calendar" onclick="displayCalendar()" title="toggle calendar">
-                <img alt="" id="cal-inner" class="fa-icon grow" src="images/calendar-alt-regular.svg" aria-hidden="true"></img>
-            </a>
-            <div id="calendar" class="col1 home">
-                <h2 class="top">Upcoming Events</h2>
-                <div class="event">
-                    <h3>ZZZZZ...</h3>
-                    <p class="date">Taking a break. Check back later :)</p>
-                </div>
-                <h2>Past Events</h2>
-                <div class="event past">
-                    <h3>Midwest Queer & Trans Zine Fest</h3>
-                    <p class="type">Zine Fest</p class="type">
-                    <p class="date">October 2024</p>
-                    <p class="location">Open Book<br>1011 Washington Ave. S., Minneapolis, MN</p>
-                </div>
-                <div class="event past">
-                    <h3>Fashion For All Show</h3>
-                    <p class="type">Fashion Show</p class="type">
-                    <p class="date">September 2024</p>
-                    <p class="location">Walker Homestead Farm<br>3867 James Ave SW., Iowa City, IA</p>
-                </div>
-                <div class="event past">
-                    <h3>Lib Con 4: Artist Alley</h3>
-                    <p class="type">Art Fair</p class="type">
-                    <p class="date">August 2024</p>
-                    <p class="location">Iowa City Public Library | Iowa City, IA</p>
-                    <p class="org">As Shark & Toad</p>
-                </div>
-                <div class="event past">
-                    <h3>Fashion Fest</h3>
-                    <p class="type">Art Fair</p class="type">
-                    <p class="date">June 2024</p>
-                    <p class="location">Wright House of Fashion | Iowa City, IA</p>
-                </div>
-                <a href="https://www.publicspaceone.com/events/reading-rooms" target="blank">
-                    <div class="event past hover">
-                        <h3>Reading Rooms</h3>
-                        <p class="type">Group Exhibition</p class="type">
-                        <p class="date">April - May 2024</p>
-                        <p class="location">Public Space One<br>229 N. Gilbert St., Iowa City, IA</p>
-                    </div>
-                </a>
-                <div class="event past">
-                    <h3>Arts Fest</h3>
-                    <p class="type">Open House</p class="type">
-                    <p class="date">May 2024</p>
-                    <p class="location">Visual Arts Building | Iowa City, IA</p>
-                </div>
-                <a href="off-the-clock/bushy.html">
-                    <div class="event past hover">
-                        <h3>Bushy</h3>
-                        <p class="type">Solo Exhibition</p class="type">
-                        <p class="date">March 2024</p>
-                        <p class="location">Visual Arts Building | Iowa City, IA</p>
-                    </div>
-                </a>
-                <div class="event past">
-                    <h3>The First Annual Midwest Queer & Trans Zine Fest</h3>
-                    <p class="type">Zine Fest</p class="type">
-                    <p class="date">October 2023</p>
-                    <p class="location">Open Book | Minneapolis, MN</p>
-                </div>
-                <div class="event past">
-                    <h3>Lib Con 3 Artist Alley</h3>
-                    <p class="type">Art Fair</p class="type">
-                    <p class="date">September 2023</p>
-                    <p class="location">Iowa City Public Library | Iowa City, IA</p>
-                </div>
-                <div class="event past">
-                    <h3>The First Annual Midwestern Very Bad Art Show</h3>
-                    <p class="type">Group Exhibition</p class="type">
-                    <p class="date">August 2023</p>
-                    <p class="location">PS1 Close House | Iowa City, IA</p>
-                </div>
-                <div class="event past">
-                    <h3>Iowa Arts Festival, Emerging Artist</h3>
-                    <p class="type">Art Fair</p class="type">
-                    <p class="date">June 2023</p>
-                    <p class="location">Old Capitol Town Center | Iowa City, IA</p>
-                </div>
-                <div class="event past">
-                    <h3>Art Market at Big Grove</h3>
-                    <p class="type">Art Fair</p class="type">
-                    <p class="date">April 2023</p>
-                    <p class="location">Big Grove Brewery | Iowa City, IA</p>
-                </div>
-                <div class="event past">
-                    <h3>ICE CREAM</h3>
-                    <p class="type">Zine Fest</p class="type">
-                    <p class="date">April 2023</p>
-                    <p class="location">PS1 Close House | Iowa City, IA</p>
-                </div>
-                <div class="event past">
-                    <h3>Slow Seasons</h3>
-                    <p class="type">Group Exhibiton</p class="type">
-                    <p class="date">December 2022</p>
-                    <p class="location">The Butterfly House Gallery | Iowa City, IA</p>
-                </div>
-                <a href="off-the-clock/identity-as-anonymity.html">
-                    <div class="event past hover">
-                        <h3>Identity as Anonymity</h3>
-                        <p class="type">Group Exhibiton</p class="type">
-                        <p class="date">July 2022</p>
-                        <p class="location">PS1 N. Gilbert House | Iowa City, IA</p>
-                    </div>
-                </a>
-            </div>
-            </section>
+            <section id="content" class="content">
+                <h2 class="light">play</h2>
+                <div class="lightbox-container">
+                    <a tabindex="0" href="play/bushy.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/bushy.webp"></img>
+                            <h3 class="title dark">Bushy</h3>
+                        </div>
+                    </a>
+                    
+                    <a tabindex="0" href="play/the-squirrel-cage-jail.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/the-squirrel-cage.webp"></img>
+                            <h3 class="title dark">The Squirrel Cage Jail</h3>
+                        </div>
+                    </a>
 
-             <!-- categories -->
-            <section class="content push">
-                <div class="home-container">
-                    <div class="col2 home">
-                        <a id="off-the-clock" href="off-the-clock.html">
-                            <div class="lightbox single">
-                                <img class="thumbnail" alt="" src="images/thumbnails/off-duty.webp"></img>
-                                <h2 class="title dark">OFF THE CLOCK</h2>
-                            </div>
-                        </a>
-    
-                        <a id="gigs" href="gigs.html">
-                            <div class="lightbox single">
-                                <img class="thumbnail" alt="" src="images/thumbnails/gigs.webp"></img>
-                                <h2 class="title dark">GIGS</h2>
-                            </div>
-                        </a>
-    
-                        <a id="about" href="about.html">
-                            <div class="lightbox single bottom">
-                                <img class="thumbnail" alt="" src="images/thumbnails/about.webp"></img>
-                                <h2 class="title dark">ABOUT</h2>
-                            </div>
-                        </a>
-                    </div>
+                    <a tabindex="0" href="play/copy-paste.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/copy-paste.webp"></img>
+                            <h3 class="title dark">COPY PASTE</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/shower-thoughts.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/shower-thoughts.webp"></img>
+                            <h3 class="title dark">Shower Thoughts</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/duct-tape.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/duct-tape.webp"></img>
+                            <h3 class="title dark">Duct Tape</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/sexy.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/sexy.webp"></img>
+                            <h3 class="title dark">Sexy</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/be.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/be.webp"></img>
+                            <h3 class="title dark">"Be"</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/identity-as-anonymity.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/identity-as-anonymity.webp"></img>
+                            <h3 class="title dark">Identity as Anonymity</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/sort-trash-with-me.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/sort-trash.webp"></img>
+                            <h3 class="title dark">Sort Trash With Me!</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/sharkz-from-a-to-z.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/sharkz.webp"></img>
+                            <h3 class="title dark" style="font-style: italic;">Sharkz (from A to Z)</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/this-is-not-a-statement.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/this-is-not-a-statement.webp"></img>
+                            <h3 class="title dark">THIS IS NOT A STATEMENT</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/colorz.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/colorz.webp"></img>
+                            <h3 class="title dark" style="font-style: italic;">Colorz</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/collection-1.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/collection1.webp"></img>
+                            <h3 class="title dark">Collection 1</h3>
+                        </div>
+                    </a>
+
+                    <a tabindex="0" href="play/how-well-do-you-know-the-clitoris.html">
+                        <div class="lightbox">
+                            <img alt="" class="thumbnail" src="images/thumbnails/clit.webp"></img>
+                            <h3 class="title dark">HOW WELL DO YOU KNOW THE CLITORIS?</h3>
+                        </div>
+                    </a>
                 </div>
             </section> 
 
