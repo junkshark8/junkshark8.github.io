@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HOW WELL DO YOU KNOW THE CLITORIS?</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                function variableContentMargin() {
+                var banner = document.getElementById("banner");
+                var content = document.getElementById("content");
+                var contentMargin = banner.offsetHeight + 56
+                console.log(contentMargin);
+                content.style.marginTop = `${contentMargin}px`;
+            }
+            variableContentMargin();
+            });
+        </script>
+
+    </head>
+    <body>   
+        <div id="wrapper">
+            <section id="banner" class="banner-image">
+                <div class="hero-text">
+                    <h1 id="hero-text">k8</h1>
+                    <p id="hero-subtitle" class="subtitle">artist & graphic designer</p>
+                </div>
+            </section>
+
+            <!-- nav bar -->
+            <navbar-component class="nav-home"></navbar-component>
+
+            <section class="hero-image off-the-clock">
+            </section>
+
+            <!-- main content -->
+            <section id="content" class="content">
+                <h2 class="light">HOW WELL DO YOU KNOW THE CLITORIS?</h2>
+                <div class="content-container">
+                    <img class="image" src="../images/play/clitoris/zines.webp" 
+                    alt="A folded zine sitting on a stack of other folded zines.">
+                    <p>
+                        Well, first of all, it looks like this! Cool, right?
+                        It's a receptor... that recieves external or transvaginal stimulation. Stimulate me, baby!
+                    </p>
+                    <img class="image" src="../images/play/clitoris/2.webp" 
+                    alt="Zine spread with text in a marker font on tape. On one side there's a labeled image of a clitoris from a cadaver 
+                    over a large image of a cut open strawberry. On the other side, the background is overlayed images of sun rays coming 
+                    through clouds and neurons connecting, and the foreground is a scientific drawing of the clitoris and pubic bone.">
+                    <p>
+                        It's a transformer... that transforms sexual stimuli from other nongenital erogenous areas.
+                        And it's a generator... that generates feelings of sexual arousal and orgasm. Ooh la la ;)
+                    </p>
+                    <img class="image" src="../images/play/clitoris/3.webp"
+                    alt="Zine spread with text in a marker font on tape. The left side is a model of a clitoris on top of butterfly wings, 
+                    with butterflies and a chrysalis surrounding it. The other side is a drawing of the clitoris with a marker drawing of 
+                    an arrow piercing it, like a cartoon heart. It's sitting atop a heart shaped pile of conversation heart candies.">
+                    <p>
+                        The clitoris is the only human organ whose sole function seems to be...
+                        SEXUAL PLEASURE!
+                    </p>
+                    <img class="image" src="../images/play/clitoris/4.webp" 
+                    alt="Zine spread with text in a marker font on tape. The left side has drawings of lungs, a heart, and a brain on top of 
+                    lined paper with scribbles on it. The left side is a purple galaxy, with a hand holding a model of a clitoris.">
+                    <img class="image" src="../images/play/clitoris/1.webp" 
+                    alt="Front and back cover of the zine. There are collaged flowers in the background and 
+                    a drawing of the clitoris in the center. The title of the zine is in a marker font on strips of tape. 
+                    The flowers wrap around to the back where the sources are cited and it's signed.">
+                    <p class="blurb"><a href="../zines/clitoris.zip" download>Download a printable copy of the zine</a>
+                    <br><br>
+                    <span class="blurb">
+                        Information from Mark J. Blechner's The Clitoris, Anatomical and Psychological Issues: Studies in 
+                        Gender and Sexuality, and Zlatko Pastor, Roman Chmel, Marta Nov&aacute;&ccaron;kov&aacute;, and Lucie Krej&ccaron;ov&aacute;'s
+                        The Role of the Clitoris in Female Sexuality: The Journal of Sexual Medicine. All images licensed under Creative Commons.       
+                    </span>
+                    <br><br>
+                    <span class="date">Class project, May 2021. Published in <a href="https://www.foolsmag.com/vol-11"
+                        target="_blank">Fools Vol. 11</a>, January 2022</span>
+                </div>
+            </section> 
+
+            <!-- footer -->
+            <section id="footer">
+                <footer-component></footer-component>
+            </section>
+        </div>
+    </body>
+</html>

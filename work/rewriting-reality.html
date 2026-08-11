@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rewriting Reality</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- script for reusable navbar component -->
+        <script src="../components/navbar.js" type="text/javascript" defer></script>
+        <!-- script for reusable footer component -->
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <!-- script for the hamburger menu -->
+        <script>
+            function collapseMenu() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    document.getElementById("bars").src="../images/xmark.svg";
+                } else {
+                    x.className = "topnav";
+                    document.getElementById("bars").src="../images/bars.svg";
+                }
+            }
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                function variableContentMargin() {
+                var banner = document.getElementById("banner");
+                var content = document.getElementById("content");
+                var contentMargin = banner.offsetHeight + 56
+                console.log(contentMargin);
+                content.style.marginTop = `${contentMargin}px`;
+            }
+            variableContentMargin();
+            });
+        </script>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <section id="banner" class="banner-image">
+                <div class="hero-text">
+                    <h1 id="hero-text">k8</h1>
+                    <p id="hero-subtitle" class="subtitle">artist & graphic designer</p>
+                </div>
+            </section>
+
+            <!-- nav bar -->
+            <navbar-component class="nav-home"></navbar-component>
+
+            <section class="hero-image gigs">
+            </section>
+
+            <!-- main content -->
+            <section id="content" class="content">
+                <h2 class="light">Rewriting Reality</h2>
+                <div class="content-container">
+                    <p>Double-sided backdrops, pit-front banners, and t-shirts for the Lewis Central Marching Band's 2022 performance based on 
+                        the "Take On Me" music video.</p>
+                    <img class="image" src="../images/work/rewriting-reality/7.webp" 
+                    alt="Pit-front banner with pencil scribbles on one side that bleed into colorful 
+                    comic panels on the other. The left side says, 'Rewriting' in a marker font and the right 
+                    side says, 'Reality' in a sketched block-letter font.">
+                    <img class="image" src="../images/work/rewriting-reality/9.webp" 
+                    alt="Marching band show with three square backdrops in the back. They each have a grey comic 
+                    panel with respective black and white sketches of a flute player, a clarinet player, and a flag being 
+                    tossed in the air.">
+                    <img class="image" src="../images/work/rewriting-reality/10.webp" 
+                    alt="Later in the show, the left backdrop has been turned to the other side, revealing a colorful 
+                    version of the comic panel. The illustrated person is gone, implying they have come out of the comic 
+                    panel and onto the field. The middle backdrop is mid turn.">
+                    <img class="image" src="../images/work/rewriting-reality/11.webp" 
+                    alt="All three backdrops have been turned to the colorful side.">
+                    <img class="image" src="../images/work/rewriting-reality/8.webp" 
+                    alt="Mockup of a white t-shirt with a condensed version of the pit-front banner.">
+                    <div class="double-image">
+                        <img class="image" src="../images/work/rewriting-reality/1.webp" 
+                        alt="Front side of the first backdrop. It has a grey comic panel with pencil sketches in and around it. A 
+                        pencil sketch of a flute player faces toward the panel, appearing as though they are looking out from the inside.">
+                        <img class="image" src="../images/work/rewriting-reality/2.webp" 
+                        alt="Back side of the first backdrop. The comic panel has flipped directions revealing colorful comic panels inside, 
+                        with halftone patterns and burst lines. The illustrated person is gone.">
+                    </div>
+                    <div class="double-image">
+                        <img class="image" src="../images/work/rewriting-reality/3.webp" 
+                        alt="Front side of the second backdrop. It has a grey comic panel with pencil sketches in and around it. A 
+                        pencil sketch of a clarinet player faces toward the panel, appearing as though they are looking out from the inside.">
+                        <img class="image" src="../images/work/rewriting-reality/4.webp" 
+                        alt="Back side of the second backdrop. The comic panel has flipped directions revealing colorful comic panels inside, 
+                        with halftone patterns and burst lines. The illustrated person is gone.">
+                    </div>
+                    <div class="double-image">
+                        <img class="image" src="../images/work/rewriting-reality/5.webp" 
+                        alt="Front side of the third backdrop. It has a grey comic panel with pencil sketches in and around it. A 
+                        pencil sketch of a color guard flag has been tossed into the frame. The thrower is not visible.">
+                        <img class="image" src="../images/work/rewriting-reality/6.webp" 
+                        alt="Back side of the third backdrop. The comic panel has flipped directions revealing colorful comic panels inside, 
+                        with halftone patterns and burst lines. The illustrated flag is gone.">
+                    </div>
+                </div>
+            </section> 
+
+            <!-- footer -->
+            <section id="footer">
+                <footer-component></footer-component>
+            </section>
+        </div>
+    </body>
+</html>
