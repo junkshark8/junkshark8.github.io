@@ -53,6 +53,7 @@ section {
     position: fixed;
     min-height: 20%;
     max-height: 20%;
+    overscroll-behavior: contain;
     background: url(images/banner-image-narrow.webp);
     background-size: cover;
     background-position: center;
