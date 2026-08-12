@@ -15,7 +15,7 @@ class Navbar extends HTMLElement {
           <ul id="nav-container">
               <div>
                   <li><a class="navlink" href="//k8doolittle.com/work.html">work</a></li>
-                  <li><a class="navlink" href="//k8doolittle.com/index.html">play</a></li>
+                  <li><a class="navlink" href="//k8doolittle.com/">play</a></li>
                   <li><a class="navlink" href="//k8doolittle.com/about.html">about</a></li>
               </div>
           </ul>
