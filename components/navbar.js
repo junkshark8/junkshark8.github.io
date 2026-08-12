@@ -14,15 +14,11 @@ class Navbar extends HTMLElement {
       <div class="topnav" id="topnav">
           <ul id="nav-container">
               <div>
-                  <li><a class="navlink" href="//katedoolittle.com/work.html">work</a></li>
-                  <li><a class="navlink" href="//katedoolittle.com/index.html">play</a></li>
-                  <li><a class="navlink" href="//katedoolittle.com/about.html">about</a></li>
+                  <li><a class="navlink" href="//k8doolittle.com/work.html">work</a></li>
+                  <li><a class="navlink" href="//k8doolittle.com/index.html">play</a></li>
+                  <li><a class="navlink" href="//k8doolittle.com/about.html">about</a></li>
               </div>
           </ul>
-          <!-- hamburger icon for small screens -->
-          <a href="javascript:void(0);" class="icon" onclick="collapseMenu()" title="toggle menu">
-              <img alt="" id="bars" class="fa-icon" src="../images/bars.svg" aria-hidden="true"></img>
-          </a>
       </div>
     </nav>
       `;
