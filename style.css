@@ -46,6 +46,11 @@ section {
     width: 100%;
 }
 
+.wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
 .banner-image {
     display: flex;
     align-items: center;
@@ -53,6 +58,7 @@ section {
     position: fixed;
     min-height: 20%;
     max-height: 20%;
+    max-width: 100%;
     background: url(images/banner-image-narrow.webp);
     background-size: cover;
     background-position: center;
@@ -95,6 +101,7 @@ section {
     font-weight: 300;
     width: fit-content;
     margin-inline: auto;
+    text-align: center;
 }
 
 .off-the-clock {
@@ -159,6 +166,7 @@ section {
 .content {
     flex: 1;
     width: 100%;
+    max-width: 100%;
     padding-bottom: 2rem;
 }
 
@@ -173,8 +181,8 @@ section {
     border-radius: 0px 0px 5px 5px;
 }
 
-.content p {
-    padding: 1rem;
+.content .p-container {
+    padding: .5rem;
     width: 100%;
     text-align: left;
     margin-inline: auto;
@@ -182,7 +190,6 @@ section {
     border-radius: 5px;
     border: 2px solid var(--dark);
     background-color: var(--yellow);
-    text-wrap: pretty;
 }
 
 .topnav {
@@ -242,11 +249,7 @@ li {
     width: min-content;
     white-space: nowrap;
   }
-
-ol {
-    padding: 0;
-}
-
+  
 ol li {
     display: list-item;
     padding: 0;
@@ -281,20 +284,16 @@ a.navlink.active {
 
 /* footer */
 footer {
-    width: 100%;
     padding: .5rem 1rem;
     background-color: var(--yellow);
-    color: var(--dark);
     font-size: 14px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-top: 2px solid var(--purple);
     border-bottom: 2px solid var(--purple);
-
-    p {
-        width: 100%;
-    }
+    overflow: hidden;
 }
 
 .fixed {
@@ -380,6 +379,11 @@ h3 {
     font-weight: 600;
 }
 
+h4, h5 {
+    margin: .5rem;
+    text-align: center;
+}
+
 .dark {
     color: var(--yellow);
     background-color: var(--dark);
@@ -393,7 +397,10 @@ p {
     margin: 0;
     font-size: 16px;
     text-align: left;
-    width: 50%;
+    width: 100%;
+    max-width: 100%;
+    text-wrap: pretty;
+    padding: .5rem;
 }
 
 .date {
@@ -609,19 +616,15 @@ p {
     -webkit-text-decoration-thickness: 2px;
   }
 
-.content-container h3, .content-container h4, .content-container h5 {
+.content-container h3 {
     text-align: center;
     width: 100%;
     padding: .5rem;
     margin-inline: auto;
-    margin-block: 1rem;
+    margin-bottom: 1rem;
     background-color: var(--blue);
     border-radius: 5px;
     border: 2px solid var(--dark);
-}
-
-.content-container h5 {
-    background-color: var(--pink);
 }
 
 .content-container h2 {
